@@ -1,0 +1,26 @@
+{
+  "name": "mielvansleeuwen.com",
+  "version": "3.0.0",
+  "description": "I-love web van Miel",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miel775/mielvansleeuwen.com.git"
+  },
+  "author": "Miel van Sleeuwen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miel775/mielvansleeuwen.com/issues"
+  },
+  "homepage": "https://github.com/miel775/mielvansleeuwen.com#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "gray-matter": "^4.0.3",
+    "liquidjs": "^10.21.0",
+    "marked": "^15.0.8"
+  }
+}
