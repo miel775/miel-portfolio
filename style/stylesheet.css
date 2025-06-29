@@ -1,64 +1,87 @@
 :root {
-    /* gradient */
-    --primary-color-gradient: linear-gradient(#474F96, #0A1252);
-    --secondary-color-gradient: linear-gradient(#938d8d, #111111);
-    
-    /* dark-mode */
-    --color-1: #0A1252;
-    --color-2: #131633;
 
-    /* contradict */
-    --color-3: #FEFEFE;
-    --color-4: #9f9d9d;
-    --color-5: #a7aee8;
+    /* color-tone-1 */
+    --color-t1: #C7CCEF;
+    --color-t2: #9297C4;
+    --color-t3: #0A1252;
+    --color-t4: #0e0e0e;
 
-    /* light-mode */
-    --l-color-1: #d1d1d1;
-    --l-color-2: #959de0;
-
-    /* contradict */
-    --l-color-3: #0A1252;
-    --l-color-4: #131633;
-    --l-color-5: #0f101e;
-
-    /* background colors */
-    --bg-color-1: #0E0F0F;
-    /* --bg-color-2: must be daylight */
-    
     /* border-radius */
-    --radius-1: 3em;
+    --radius-desktop: 86px;
+    --radius-tablet: 40px;
+    --radius-mobile: 20px;
 
-    /* border */
-    --border: 2px solid #0f101e;
+    /* border text */ 
+    --border-desktop: 20px var(--color-t1);
+    --border-tablet: 14px var(--color-t1);
+    --border-mobile: 10px var(--color-t1);
 
-    /* font-sized */
-    --h1-desktop: 122px;
-    --h2-desktop: 96px;
-    --h3-desktop: 84px;
-    --h4-desktop: 64px;
-    --h5-desktop: 48px;
-    --h6-desktop: 32px;
-    --p-desktop: 16px;
+    /* font-sizes */
+    --h1-desktop: 300px;
+    --h2-desktop: 128px;
+    --h3-desktop: 88px;
+    --p-desktop: 24px;
 
     --h1-tablet: 96px;
     --h2-tablet: 84px;
-    --h3-tablet: 72px;
-    --h4-tablet: 56px;
-    --h5-tablet: 40px;
-    --h6-tablet: 28px;
-    --p-tablet: 14px;
+    --h3-tablet: 64px;
+    --p-tablet: 20px;
 
     --h1-mobile: 84px;
     --h2-mobile: 72px;
-    --h3-mobile: 64px;
-    --h4-mobile: 48px;
-    --h5-mobile: 32px;
-    --h6-mobile: 24px;
-    --p-mobile: 12px;
+    --h3-mobile: 48px;
+    --p-mobile: 16px;
 }
 
-* {
+body {
+    background-color: var(--color-t3);
+}
+
+main {
     text-decoration: none;
+    margin: 20%;
+
+    @media (max-width:1200px) {
+        margin: 10%;
+    }
+
+    @media (max-width:768px) {
+        margin: 0;
+    }
+}
+
+section {
+    background-color: var(--color-t1);
+    color: var(--color-t2);
+    border-radius: var(--radius-desktop);
+
+    @media (max-width:1200px) {
+        border-radius: var(--radius-tablet);
+    }
+
+    @media (max-width:768px) {
+        border-radius: 0;
+    }
+
+    p {
+        margin: 5%;
+    }
+}
+
+a {
+    background-color: var(--color-t1);
+    height: 500px;
+    width: 500px;
+    border-radius: var(--radius-desktop);
+
+
+    @media (max-width:1200px) {
+        border-radius: var(--radius-tablet);
+    }
+
+    @media (max-width:768px) {
+        border-radius: var(--radius-mobile);
+    }
 }
 
 /* fonts */
@@ -66,92 +89,65 @@
 h1 {
     font-family: 'Garet Heavy';
     font-size: var(--h1-desktop);
+    -webkit-text-stroke: var(--border-desktop);
     color: var(--color-3);
+    pointer-events: none;
+    paint-order: stroke fill;
 
     @media (max-width:1200px) {
         font-size: var(--h1-tablet);
+        -webkit-text-stroke: var(--border-tablet);
     }
 
     @media (max-width:768px) {
         font-size:  var(--h1-mobile);
+        -webkit-text-stroke: var(--border-mobile);
     }
 }
 
 h2 {
-    font-family: "Jersey 20";
+    font-family: 'Garet Heavy';
     font-size: var(--h2-desktop);
     color: var(--color-3);
+    -webkit-text-stroke: var(--border-desktop);
+    pointer-events: none;
+    paint-order: stroke fill;
+
 
     @media (max-width:1200px) {
+        -webkit-text-stroke: var(--border-tablet);
         font-size: var(--h2-tablet);
     }
 
     @media (max-width:768px) {
+        -webkit-text-stroke: var(--border-mobile);
         font-size:  var(--h2-mobile);
     }
 }
 
 h3 {
-    font-family: 'Garet Book';
+    font-family: 'Garet Heavy';
     font-size: var(--h3-desktop);
-    color: var(--color-3);
+    color: var(--color-t2);
+    -webkit-text-stroke: var(--border-desktop);
+    pointer-events: none;
+    paint-order: stroke fill;
+
 
     @media (max-width:1200px) {
+        -webkit-text-stroke: var(--border-tablet);
         font-size: var(--h3-tablet);
     }
 
     @media (max-width:768px) {
+        -webkit-text-stroke: var(--border-mobile);
         font-size:  var(--h3-mobile);
     }
 }
 
-h4 {
-    font-family: 'Garet Book';
-    font-size: var(--h4-desktop);
-    color: var(--color-3);
-
-    @media (max-width:1200px) {
-        font-size: var(--h4-tablet);
-    }
-
-    @media (max-width:768px) {
-        font-size:  var(--h4-mobile);
-    }
-}
-
-h5 {
-    font-family: 'Garet Book';
-    font-size: var(--h5-desktop);
-    color: var(--color-3);
-
-    @media (max-width:1200px) {
-        font-size: var(--h5-tablet);
-    }
-
-    @media (max-width:768px) {
-        font-size:  var(--h5-mobile);
-    }
-}
-
-h6 {
-    font-family: 'Archivo';
-    font-size: var(--h6-desktop);
-    color: var(--color-3);
-
-    @media (max-width:1200px) {
-        font-size: var(--h6-tablet);
-    }
-
-    @media (max-width:768px) {
-        font-size:  var(--h6-mobile);
-        -webkit-text-stroke: 1px black;
-    }
-}
-
 p {
-    font-family: 'Archivo';
+    font-family:  "Jersey 20";
     font-size: var(--p-desktop);
-    color: var(--color-3);
 
     @media (max-width:1200px) {
         font-size: var(--p-tablet);
@@ -162,6 +158,19 @@ p {
     }
 }
 
+label {
+    font-family:  "Jersey 20";
+    font-size: var(--p-desktop);
+
+    @media (max-width:1200px) {
+        font-size: var(--p-tablet);
+    }
+
+    @media (max-width:768px) {
+        font-size:  var(--p-mobile);
+    }
+
+}
 
 
 
@@ -191,11 +200,11 @@ p {
     url("https://db.onlinewebfonts.com/t/5ebe3f5f5a6cdaffeafd16be0c93df0b.svg#Garet Book")format("svg");
 }
 
-.archivo {
-    font-family: "Archivo", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    font-variation-settings:
-      "width" 100;
+video {
+    border-radius: var(--radius-desktop);
+}
+
+footer {
+    width: 100%;
+    background-color: var(--color-t1);
 }
