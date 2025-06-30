@@ -17,16 +17,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 <body>
 <main>
 
-        <section class="about-me">
+        <section id="about-me">
             <h1>Miel</h1>
 
-            <p id="introduction-text">My name is Miel van Sleeuwen I am 24 years old and I am from the Netherlands! This is my portfolio take a careful look into my world!</p>
+            <p id="introduction-text">My name is Miel van Sleeuwen I am 24 years old and I am from the Netherlands! This is my portfolio take a careful look into my world! My mantra is never stop exploring!
+            <br>I am convinced the world has so much to offer with a combination of creativity and adventure. Experience in Front end Webdevelopment, Video creating and Urban Design.</p>
 
             <img id="introduction-logo" src="assets/logo-henricus.png" alt="logo of Miel" height="500" width="500">
         </section>
@@ -37,9 +38,28 @@
             <p> These are all the projects I am working on..!</p>
         </section>
 
-        <a id="project" href="./pages/trafficlights.html">
+        <div id="projects">
+            <a id="project" href="./pages/pokeapp.html">
+                <img src="./assets/projects/pokeapp.svg" width="150" height="150" alt="Logo of Pokeapp" loading="lazy">
+            </a>
 
-        </a>
+            <a id="project" href="./pages/trafficlights.html">
+                <img src="./assets/projects/traffic-light.svg" width="150" height="150" alt="Logo of traffic light" loading="lazy">
+            </a>
+
+            <a id="project" href="./pages/tanavad.html">
+                <img src="./assets/projects/tanavad.svg" width="150" height="150" alt="Logo of streetart" loading="lazy">
+            </a>
+
+            <a id="project" href="./pages/train-jingles.html">
+                <img src="./assets/projects/train-jingles.svg" width="150" height="150" alt="Logo of train" loading="lazy">
+            </a>
+
+            <a id="project" href="./pages/windows-history.html">
+                <img src="./assets/projects/windows-history.svg" width="150" height="150" alt="Logo of train" loading="lazy">
+            </a>
+
+        </div>
 
         <section class="video-galery">
             <h2>Art Gallery</h2>
@@ -47,9 +67,10 @@
         </section>
 
 
+        <h3>photos</h3>
+        <p>photos I took</p>
         <div id="photos">
-            <h3>photos</h3>
-            <p>photos I took</p>
+
 
             <picture>
                 <source srcset="./assets/photos/photo-1.avif" alt="sunset in melbourne" height="200" width="200" loading="lazy">
@@ -88,10 +109,10 @@
             </picture>
         </div>
 
+
+        <h3>atmosphere</h3>
+        <p>A video can take you back to so many memories, traveling the world can be overwhelming but luckily we can look back with a simple atmsophere.<br>
         <div id="art-gallery-tiktok">
-            <h3>atmosphere</h3>
-            <p>A video can take you back to so many memories, traveling the world can be overwhelming but luckily we can look back with a simple atmsophere.<br>
-            
             The concept is simple place the town/city where you are with the year of visiting and add atmosphere footage into it. The soundtrack has to be a loop.</p>
 
                 <video id="tiktok-video"  controls height="400" width="225" alt="atmosphere video auckland">
@@ -130,21 +151,22 @@
                     <source src="./assets/tiktok-atmosphers/singapore.mp4" type="video/mp4">
                     your browser doesn't support this video
                 </video>
+
+                <video id="tiktok-video" controls loop height="400" width="225" alt="atmosphere video melbourne">
+                    <source src="./assets/tiktok-atmosphers/melbourne.mov" type="video/mov">
+                    <source src="./assets/tiktok-atmosphers/melbourne.mp4" type="video/mp4">
+                    your browser doesn't support this video
+                </video>
         </div>
 
 
 
-        <video controls loop height="400" width="225" alt="atmosphere video melbourne">
-            <source src="./assets/tiktok-atmosphers/melbourne.mov" type="video/mov">
-            <source src="./assets/tiktok-atmosphers/melbourne.mp4" type="video/mp4">
-            your browser doesn't support this video
-        </video>
 
 
+
+        <h3>.avi</h3>
+        <p>Somehow I find it funny to just put on Nintendo music on the background of 16:9 video's for YouTube. For just being in the moment I don't capture these footages with my phone but with my camera!</p>
         <div id="art-gallery-avi-projects">
-            <h3>.avi</h3>
-            <p>Somehow I find it funny to just put on Nintendo music on the background of 16:9 video's for YouTube. For just being in the moment I don't capture these footages with my phone but with my camera!</p>
-
             <video controls loop height="480" width="854"alt="UK.avi video">
                 <source src="./assets/youtube-avi/🇬🇧.AVI.mp4" type="video/mp4">
                 your browser doesn't support this video
@@ -168,41 +190,39 @@
 
         </div>
 
-        <div id="art-gallery-winexp">
-            <h3>WinExp</h3>
-            <p>By the way, I have a YouTube channel! Since 2016 I publish weekly a new video on this YouTube channel!</p>
 
+        <h3>WinExp</h3>
+        <p>By the way, I have a YouTube channel! Since 2016 I publish weekly a new video on this YouTube channel!</p>
+
+        <div id="art-gallery-winexp">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/FXs3OIQsLH4?si=HsZuFkcXV26dKI_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-            <video id="tiktok-video"  controls height="400" width="225" alt="hello moto ringtone">
+            <video id="tiktok-video"  controls height="315" width="177" alt="hello moto ringtone">
                 <source src="./assets/youtube-winexp/2.5.mp4" type="video/mp4">
                 your browser doesn't support this video
             </video>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/5NbnJbeK67w?si=mcWp-lfaWL7PUf1D" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-            <video id="tiktok-video"  controls height="400" width="225" alt="vtech startup">
+            <video id="tiktok-video"  controls height="315" width="177" alt="vtech startup">
                 <source src="./assets/youtube-winexp/3.7.mp4" type="video/mp4">
-                your browser doesn't support this video
-            </video>
-
-            <video id="tiktok-video"  controls height="400" width="225" alt="vtech startup">
-                <source src="./assets/youtube-winexp/4.6.mp4" type="video/mp4">
                 your browser doesn't support this video
             </video>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/UtazOGbj_6g?si=5G-waE67MSYDEwA2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-            <video id="tiktok-video"  controls height="400" width="225" alt="vtech startup">
+            <video id="tiktok-video"  controls height="315" width="177" alt="vtech startup">
                 <source src="./assets/youtube-winexp/5.3.mp4" type="video/mp4">
                 your browser doesn't support this video
             </video>
 
-            <video  id="tiktok-video" controls height="400" width="225" alt="vtech startup">
+            <video  id="tiktok-video" controls height="315" width="177" alt="vtech startup">
                 <source src="./assets/youtube-winexp/7.6.mp4" type="video/mp4">
                 your browser doesn't support this video
             </video>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DxnDf-cIIVI?si=NUOFszS42FQoMOn5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
         </div>
     
@@ -211,30 +231,42 @@
             <p> Want a collab with me you can contact me!</p>
 
             <form>
+            <div id="textfield-message">
                 <label for="message">Message</label>
                 <input type="text" name="message" placeholder="Write something.." id="textfield-message">
+            </div>
 
+            <div id="fn">
                 <label for="first-name" id="fn">First Name</label>
                 <input type="text" name="firstname" placeholder="First name" id="textfield-fname">
+            </div>
 
+            <div id="ln">
                 <label for="last-name">Last name</label>
                 <input type="text" name="firstname" placeholder="Last name" id="textfield-lname">
+            </div>
 
-
+            <div id="submit">
                 <input type="submit" value="Submit" id="submit">
+            </div>
 
             </form>
         </section>
     </main>
 
     <footer>
-        <div class="logo-footer">
-            <img src="./assets/logo-henricus.png" alt="Logo">
+        <div id="logo-footer">
+            <img src="./assets/emblem.svg" alt="Logo" height="250" width="250">
         </div>
-        <div class="links">
-            <a href="https://www.linkedin.com/in/miel-van-sleeuwen-364766152/" class="fa-solid fa-globe"></a>
-            <a href="https://www.instagram.com/mielvansleeuwen/" class="fa-solid fa-camera-retro"></a>
-            <a href="https://www.youtube.com/@mhvs775" class="fa-solid fa-video"></a>
+
+        <div id="links">
+            <a id="link" href="https://www.linkedin.com/in/miel-van-sleeuwen-364766152/" class="fa-solid fa-globe"></a>
+            <a id="link" href="https://www.instagram.com/mielvansleeuwen/" class="fa-solid fa-camera-retro"></a>
+            <a id="link" href="https://www.youtube.com/@mhvs775" class="fa-solid fa-video"></a>
+        </div>
+
+        <div id="copyright">
+            <p> © Copyright reserverd Miel van Sleeuwen</p>
         </div>
     </footer>
 </body>

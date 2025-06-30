@@ -40,7 +40,7 @@ body {
 main {
     text-decoration: none;
     margin: 20%;
-
+    overflow-x:visible;
     @media (max-width:1200px) {
         margin: 10%;
     }
@@ -68,7 +68,7 @@ section {
     }
 }
 
-a {
+#project {
     background-color: var(--color-t1);
     height: 500px;
     width: 500px;
@@ -207,4 +207,38 @@ video {
 footer {
     width: 100%;
     background-color: var(--color-t1);
+    color: var(--color-t4);
+    height: 500px;
+}
+
+#logo-footer {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+#links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-t1);
+    gap: 2em;
+}
+
+#link {
+    display: inline-block;
+    color: var(--color-t3);
+    background-color: var(--color-t2);
+    padding: 1em;
+    border-radius: 5%;
+}
+
+#copyright {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+
+    p {
+        color: var(--color-t4);
+    }
 }
