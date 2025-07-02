@@ -63,7 +63,7 @@ form {
     width: 90%;
     margin: 2em;
     padding: 2em;
-    margin-bottom: 20em;
+    margin-top: -8em;
     box-sizing: border-box;
 }
 
@@ -77,6 +77,10 @@ form {
     vertical-align: top;
     gap: 1em;
     box-sizing: border-box;
+
+    @media (max-width:768px) {
+        width: 80%;
+    }
 }
 
 #contact-form {
@@ -123,11 +127,22 @@ form {
     @media (max-width:768px) {
         bottom: 40%;
         left: 20%;
+        scale: 0.5;
     }
 }
 
 #tiktok-video {
     border-radius: 5%;
+
+    @media (max-width:1200px) {
+        width: 169px;
+        height: 300px;
+    }
+
+    @media (max-width:768px) {
+        width: 113px;
+        height: 200px;
+    }
 }
 
 
@@ -172,10 +187,18 @@ form {
     display: flex;
     gap: 2em;
     width: 200%;
-    overflow: hidden;
+    overflow-x: scroll;
     position: relative;
     right: 400px;
     bottom: 100px;
+
+    @media (max-width:1200px) {
+        right: 100px;
+    }
+        
+    @media (max-width:768px) {
+        right: 0;
+    }
 
 }
 
@@ -194,6 +217,11 @@ form {
     right: 550px;
     gap: 2em;
     overflow: scroll;
+
+    @media (max-width:768px) {
+        right: 100px;
+    }
+
 }
 
 #art-gallery-avi-projects {
@@ -204,6 +232,19 @@ form {
     right: 280px;
     gap: 2em;
 
+    video {
+        @media (max-width:1200px) {
+            height: 300px;
+            width: 534px;
+            border-radius: 2%;
+        }
+
+        @media (max-width:768px) {
+            height: 225px;
+            width: 400px;
+            border-radius: 1%;
+        }
+    }
 }
 
 #art-gallery-winexp {
@@ -211,6 +252,26 @@ form {
     position: relative;
     right: 280px;
     gap: 2em;
+
+    @media (max-width:1200px) {
+        right: 100px;
+    }
+
+
+
+    iframe {
+        @media (max-width:1200px) {
+            height: 300px;
+            width: 534px;
+            border-radius: 2%;
+        }
+
+        @media (max-width:768px) {
+            height: 225px;
+            width: 400px;
+            border-radius: 1%;
+        }
+    }
 
 }
 
@@ -220,7 +281,13 @@ form {
     }
 
     @media (max-width:768px) {
-        height: 500px;
+        height: 300px;
         margin-top: 250px;
+    }
+}
+
+.contact-form {
+    form {
+        top
     }
 }
