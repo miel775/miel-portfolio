@@ -1,1 +1,0 @@
-gsap.from('.logo', {duration: 2, rotate: 15, ease: "slow"});
