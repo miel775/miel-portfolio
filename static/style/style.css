@@ -56,6 +56,11 @@
     --section-width-scrolled: 100%;
     --section-border-radius: 20px;
 
+    /* margin */
+    --margin-section-desktop: 5em;
+    --margin-section-tablet: 3em;
+    --margin-section-mobile: 1em;
+
     /* border */
     --border-desktop: 3px var(--neutral-color);
     --border-tablet: 2px var(--neutral-color);
@@ -130,6 +135,7 @@ a {
     font-size: var(--p-desktop);
     font-family: "Jersey 20", sans-serif;
     font-weight: 350;
+    text-decoration: none;
 
     @media (max-width: 1080px) {
         font-size: var(--p-tablet);
@@ -137,6 +143,13 @@ a {
 
     @media (max-width: 720px) {
         font-size: var(--p-mobile);
+    }
+
+    &:hover {
+        color: var(--accent-color-2-dark-4);
+        transition: 0.2s;
+        text-decoration: underline;
+        transform: perspective(1.15,1.15);
     }
 }
 
@@ -160,6 +173,7 @@ section {
     display: flex;
     border-radius: var(--section-border-radius);
     justify-content: center;
+    margin: var(--margin-desktop);
 }
 
 .jersey-20-regular {

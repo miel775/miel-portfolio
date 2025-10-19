@@ -4,6 +4,8 @@
     import { ScrollTrigger } from 'gsap/ScrollTrigger'
     import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
 
+    let { title } = 'example'
+
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(MorphSVGPlugin)
 
@@ -22,7 +24,7 @@ gsap.registerPlugin(MorphSVGPlugin)
 </script>
 
 <section class="general-section">
-    <h2>Portfolio</h2>
+    <h2> { title } </h2>
 </section>
 
 
