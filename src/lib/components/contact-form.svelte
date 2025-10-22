@@ -6,7 +6,7 @@
     import Bottle from '$lib/assets/svg/bottle.svelte'
 
     let { title } = 'Contact'
-    let { content } = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets"
+    let { content } = "Would you like to get in touch with me? You can fill up the form here"
 
 </script>
 
@@ -19,6 +19,24 @@
   <div id="container-2">
     <h2> { title } </h2>
     <p> { content } </p>
+<form id="contact-form">
+  <div id="form-group">
+    <label for="first-name">First Name</label>
+    <input id="first-name" name="firstName" type="text" placeholder="Enter your first name" required>
+  </div>
+
+  <div id="form-group">
+    <label for="last-name">Last Name</label>
+    <input id="last-name" name="lastName" type="text" placeholder="Enter your last name" required>
+  </div>
+
+  <div id="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Tell me your story..." required></textarea>
+  </div>
+
+  <button type="submit">Send</button>
+</form>
   </div>
 
 </div>

@@ -4,7 +4,8 @@
     import { ScrollTrigger } from 'gsap/ScrollTrigger'
     import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin'
 
-    let { title } = 'example'
+    export let title;
+    export let content;
 
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(MorphSVGPlugin)
@@ -25,13 +26,13 @@ gsap.registerPlugin(MorphSVGPlugin)
 
 <section class="general-section">
     <h2> { title } </h2>
+    <p> { content } </p>
 </section>
 
 
 <style>
-
-#svg-2{
-  visibility: hidden;
+.general-section p {
+  font-size: 20px;
 }
 
 </style>

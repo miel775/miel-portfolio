@@ -106,7 +106,7 @@ h2{
     pointer-events: none;
     font-size: var(--h2-desktop);
     font-family: 'Garet', sans-serif;
-    font-weight: 350;
+    font-weight: 850;
 
         @media (max-width: 1080px) {
         font-size: var(--h2-tablet);

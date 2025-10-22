@@ -4,6 +4,8 @@
     import NavigationBar from '$lib/components/navigation-bar.svelte'
     import Contact from '$lib/components/contact-form.svelte'
     import Footer from '$lib/components/footer.svelte'
+
+    export let data;
 </script>
 
 <NavigationBar />
@@ -14,13 +16,9 @@
 
 <Background />
 
-<Section />
-
-<Section />
-
-<Section />
-
-<Section />
+{#each data.sections as section}
+  <Section title={section.title} content={section.content} />
+{/each}
 
 <Contact />
 
