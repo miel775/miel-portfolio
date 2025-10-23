@@ -32,9 +32,9 @@
     </div>
 
     <div id="container-3">
-        <a href="https://www.linkedin.com/in/miel-van-sleeuwen-364766152/"> <Linkedin /> </a>
-        <a  class="fa-brands fa-github" href="https://github.com/miel775"> <Github /> </a>
-        <a href="https://www.youtube.com/@mhvs775/videos"> <Camera /> </a>
+        <i class="fa-brands fa-square-youtube fa-beat"></i>
+        <i class="fa-brands fa-square-github fa-beat"></i>
+        <i class="fa-brands fa-linkedin fa-beat"></i>
     </div>
 
 </footer>
@@ -42,8 +42,8 @@
 <style>
 footer {
     display: flex;
-    flex-direction: column;   /* stack items vertically */
-    align-items: center;      /* center everything */
+    flex-direction: column;   
+    align-items: center; 
     margin-left: -6%;
     margin-right: -6%;
     margin-bottom: -6%;
@@ -63,7 +63,7 @@ footer {
 
     #line {
         display: block;
-        background-color: var(--neutral-color-light-3);
+        background-color: var(--neutral-color-light-4);
         height: 0.5em;
         width: 50vw;
         display: flex;
@@ -73,6 +73,7 @@ footer {
     #text {
         line-height: 50%;
         margin: 2em;
+        color: var(--neutral-color-light-4);
 
         & p:nth-of-type(1) {
             font-size: 24px;
@@ -80,19 +81,20 @@ footer {
     }
 
     #container-3 {
-    display: flex;               /* puts icons in a row */
+    display: flex;      
     flex-direction: row;
-    justify-content: center;     /* centers the row */
+    justify-content: center;   
     align-items: center;
-    gap: 1.5em;                  /* spacing between the icons */
+    gap: 1.5em;             
     margin-top: 1em;
     margin-bottom: 3em;
 
-    & a {
-        display: flex;
+    & i  {
+        display: block;
         height: 2em;                
         width: 2em;
-        color: var(--neutral-color-light-4);
+        background-color: var(--neutral-color-light-1);
+
     }
     }
 </style>

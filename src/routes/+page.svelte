@@ -5,6 +5,9 @@
     import Contact from '$lib/components/contact-form.svelte'
     import Footer from '$lib/components/footer.svelte'
 
+    import Portfoliopreview from '$lib/assets/svg/portolio-preview.svelte'
+    import PortolioPreview from "$lib/assets/svg/portolio-preview.svelte";
+
     export let data;
 </script>
 
@@ -16,9 +19,9 @@
 
 <Background />
 
-{#each data.sections as section}
-  <Section title={section.title} content={section.content} />
-{/each}
+<Section title="halle" content="hahah">
+    <PortolioPreview />
+</Section>
 
 <Contact />
 

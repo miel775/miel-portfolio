@@ -1,5 +1,5 @@
 
-<svg width="215" height="344" viewBox="0 0 215 344" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg id="bottle" width="215" height="344" viewBox="0 0 215 344" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_15_193)">
         <path d="M162.059 12.2529L146.192 59.2559C146.192 59.2559 153.996 68.4889 159.414 68.7499C164.832 69.0109 173.54 68.9619 173.54 68.9619L198.047 20.7499C198.047 20.7499 184.968 26.4149 177.171 22.7139C169.374 19.0129 162.059 12.2529 162.059 12.2529Z" fill="#775A25" stroke="black" stroke-width="4" stroke-miterlimit="10"/>
         <path d="M199.888 15.1707C200.345 8.67139 192.263 2.80888 181.838 2.07641C171.413 1.34393 162.592 6.01887 162.135 12.5181C161.678 19.0174 169.759 24.8799 180.185 25.6124C190.61 26.3449 199.431 21.67 199.888 15.1707Z" fill="#775A25" stroke="black" stroke-width="4" stroke-miterlimit="10"/>
@@ -14,3 +14,11 @@
     </clipPath>
     </defs>
 </svg>
+
+<style>
+
+#bottle:hover {
+    scale: 1.3;
+    transition: 0.3s;
+}
+</style>

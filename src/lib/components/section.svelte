@@ -7,6 +7,7 @@
     export let title;
     export let content;
 
+
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(MorphSVGPlugin)
 
@@ -24,15 +25,7 @@ gsap.registerPlugin(MorphSVGPlugin)
 // });
 </script>
 
-<section class="general-section">
-    <h2> { title } </h2>
-    <p> { content } </p>
+<section>
+  <h2>{title}</h2>
+  <p>{content}</p>
 </section>
-
-
-<style>
-.general-section p {
-  font-size: 20px;
-}
-
-</style>

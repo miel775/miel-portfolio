@@ -85,7 +85,7 @@ h1 {
 section h2 {
     pointer-events: none;
     color: var(--neutral-color-light-4);
-    font-family: 'Garet', sans-serif;
+    font-family: 'Garet Heavy', sans-serif;
     font-weight: 850;
     -webkit-text-stroke: var(--border-desktop);
     position: relative;
@@ -105,7 +105,7 @@ section h2 {
 h2{
     pointer-events: none;
     font-size: var(--h2-desktop);
-    font-family: 'Garet', sans-serif;
+    font-family: 'Garet Heavy', sans-serif;
     font-weight: 850;
 
         @media (max-width: 1080px) {
