@@ -8,6 +8,16 @@
 
 <NavigationBar />
 
+<div id="banner"></div>
+
 <Background />
 
+<Contact />
+
 <Footer />
+
+<style>
+    #banner {
+        height: 30vh;
+    }
+</style>

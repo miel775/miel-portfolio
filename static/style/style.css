@@ -35,6 +35,10 @@
     --h2-tablet: 60px;
     --h2-mobile: 48px;
 
+    --h3-desktop: 48px;
+    --h3-tablet: 32px;
+    --h3-mobile: 24px;
+
     --p-desktop: 20px;
     --p-tablet: 18px;
     --p-mobile: 16px;
@@ -65,12 +69,18 @@
     --border-desktop: 3px var(--neutral-color);
     --border-tablet: 2px var(--neutral-color);
     --border-mobile: 1px var(--neutral-color);
+
+    /* gaps */
+    --gap: 3em;
+
+    /* border */
+    --border: #0000 1px solid;
 }
 
 h1 {
     pointer-events: none;
     font-size: var(--h1-desktop);
-    font-family: 'Garet', sans-serif;
+    font-family: 'Garet Heavy', sans-serif;
     font-weight: 850;
 
     @media (max-width: 1080px) {
@@ -88,8 +98,7 @@ section h2 {
     font-family: 'Garet Heavy', sans-serif;
     font-weight: 850;
     -webkit-text-stroke: var(--border-desktop);
-    position: relative;
-    bottom: 120px;
+    text-transform: uppercase;
 
     @media (max-width: 1080px) {
         font-size: var(--h2-tablet);
@@ -105,7 +114,7 @@ section h2 {
 h2{
     pointer-events: none;
     font-size: var(--h2-desktop);
-    font-family: 'Garet Heavy', sans-serif;
+    font-family: 'Garet Book', sans-serif;
     font-weight: 850;
 
         @media (max-width: 1080px) {
@@ -114,6 +123,21 @@ h2{
 
     @media (max-width: 720px) {
         font-size: var(--h2-mobile);
+    }
+}
+
+h3 {
+    pointer-events: none;
+    font-size: var(--h3-desktop);
+    font-family: 'Garet Book', sans-serif;
+    font-weight: 350;
+
+        @media (max-width: 1080px) {
+        font-size: var(--h3-tablet);
+    }
+
+    @media (max-width: 720px) {
+        font-size: var(--h3-mobile);
     }
 }
 
@@ -153,6 +177,23 @@ a {
     }
 }
 
+li {
+    font-size: var(--p-desktop);
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 350;
+    line-height: 0.5em;
+
+    @media (max-width: 1080px) {
+        font-size: var(--p-tablet);
+    }
+
+    @media (max-width: 720px) {
+        font-size: var(--p-mobile);
+    }
+
+}
+
+
 body {
     margin: var(--margin-desktop);
 
@@ -172,7 +213,7 @@ section {
     min-width: var(--section-width);
     display: flex;
     border-radius: var(--section-border-radius);
-    justify-content: center;
+    justify-content: flex-start;
     margin: var(--margin-desktop);
 }
 
@@ -182,14 +223,35 @@ section {
     font-style: normal;
 }
 
+footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: -6%;
+        margin-right: -6%;
+        margin-bottom: -6%;
+        background-color: var(--neutral-color-light-1);
+        color: var(--neutral-color-light-4);
+        padding: var(--padding-desktop);
+        text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+import '@fontsource/jersey-20-charted';
+
 @font-face {
-    font-family: 'Garet';
+    font-family: 'Garet Book';
     font-style: normal;
     font-weight: 300;
     src: local('Garet'), url('https://fonts.cdnfonts.com/s/57477/Garet-Book.woff') format('woff');
 }
 @font-face {
-    font-family: 'Garet';
+    font-family: 'Garet Heavy';
     font-style: normal;
     font-weight: 850;
     src: local('Garet'), url('https://fonts.cdnfonts.com/s/57477/Garet-Heavy.woff') format('woff');

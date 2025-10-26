@@ -12,8 +12,8 @@
     #shape-5 {
         position: absolute;
         scale: 3;
-        top: 10%;
-        left: 25%;    
+        top: 60%;
+        left: -25%;    
         filter: blur(50px);
     }
 </style>

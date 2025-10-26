@@ -12,7 +12,7 @@
     #shape-1 {
         position: absolute;
         scale: 1.7;
-        left: 80%;
+        left: -80%;
         filter: blur(50px);
     }
 </style>

@@ -19,13 +19,26 @@
 
 <Background />
 
-<Section title="halle" content="hahah">
-    <PortolioPreview />
+<Section title="Portfolio" content="discover my portfolio">
 </Section>
+
+
+<Section title="About" content="Welcome to my portfolio, here you can take a closer look into my personal world. My name is Miel van Sleeuwen I am 24 years old and I am from the Netherlands! 
+
+This is my portfolio take a careful look into my world! My mantra is never stop exploring!I am convinced the world has so much to offer with a combination of creativity and adventure.
+
+ Experience in Front end Web Development, Video creating and Urban Design. ">
+</Section>
+
+<Section title="Projects" content="Here are projects I've worked on in my career, hover to discover what it means" />
+
 
 <Contact />
 
 <Footer />
+
+
+
 
 <style>
 

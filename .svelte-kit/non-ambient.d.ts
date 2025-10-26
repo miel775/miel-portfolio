@@ -27,18 +27,20 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/about" | "/contact" | "/portfolio" | "/projects";
+		RouteId(): "/" | "/about" | "/contact" | "/library" | "/portfolio" | "/projects" | "/projects/[project]";
 		RouteParams(): {
-			
+			"/projects/[project]": { project: string }
 		};
 		LayoutParams(): {
-			"/": Record<string, never>;
+			"/": { project?: string };
 			"/about": Record<string, never>;
 			"/contact": Record<string, never>;
+			"/library": Record<string, never>;
 			"/portfolio": Record<string, never>;
-			"/projects": Record<string, never>
+			"/projects": { project?: string };
+			"/projects/[project]": { project: string }
 		};
-		Pathname(): "/" | "/about" | "/about/" | "/contact" | "/contact/" | "/portfolio" | "/portfolio/" | "/projects" | "/projects/";
+		Pathname(): "/" | "/about" | "/about/" | "/contact" | "/contact/" | "/library" | "/library/" | "/portfolio" | "/portfolio/" | "/projects" | "/projects/" | `/projects/${string}` & {} | `/projects/${string}/` & {};
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
 		Asset(): "/robots.txt" | "/style/style.css" | string & {};
 	}

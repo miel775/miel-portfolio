@@ -46,18 +46,19 @@
 
     <form id="contact-form">
       <div class="form-group">
-        <label for="first-name">First Name</label>
-        <input id="first-name" name="firstName" type="text" placeholder="Enter your first name" required />
+        <input id="first-name" name="firstName" type="text" placeholder="First name" required />
       </div>
 
       <div class="form-group">
-        <label for="last-name">Last Name</label>
-        <input id="last-name" name="lastName" type="text" placeholder="Enter your last name" required />
+        <input id="last-name" name="lastName" type="text" placeholder="Last name" required />
       </div>
 
       <div class="form-group full-width">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Tell me your story..." required></textarea>
+        <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+      </div>
+
+        <div class="form-group full-width">
+        <input id="mail" name="mail" type="text" placeholder="Mail" required />
       </div>
 
       <button type="submit">Send Message</button>
@@ -74,11 +75,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 3em;
-    color: var(--text-color, #fff);
-    border-radius: 2rem;
+    gap: var(--gap);
+    color: var(--neutral-color-1);
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   }
 
   @media (max-width: 820px) {
@@ -88,7 +87,7 @@
     }
 
     #container-1 {
-      display: none; /* optional: hide bottle on small screens */
+      display: none;
     }
   }
 
@@ -100,19 +99,6 @@
 
   #container-2 {
     padding: 2em;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 1rem;
-    backdrop-filter: blur(8px);
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5em;
-  }
-
-  p {
-    font-size: 1.1rem;
-    margin-bottom: 2em;
   }
 
   #contact-form {
@@ -132,48 +118,47 @@
   }
 
   label {
-    font-weight: 600;
+    font-family: 'Jersey 20';
     margin-bottom: 0.5em;
   }
 
   input,
   textarea {
     padding: 0.9em 1em;
-    border: none;
-    border-radius: 0.7em;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-size: 1rem;
+    border: #0000 solid 1px;
+    background: var(--accent-color-1-light-1);
+    color: var(--neutral-color-1);
     transition: all 0.3s ease;
-    outline: none;
+    color: var(--neutral-color-1);
+    font-family: 'Jersey 20';
   }
 
   input::placeholder,
   textarea::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--neutral-color-light-1);
+    font-family: 'Jersey 20';
+    font-size: 2em;
   }
 
   input:focus,
   textarea:focus {
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 0 2px var(--highlight-color, #00b4d8);
+    background: var(--accent-color-1-light-2);
+    box-shadow: 0 0 0 2px var(--highlight-color, var(--accent-color-1));
   }
 
   button {
+    font-family: 'Jersey 20';
+    font-size: 1em;
     grid-column: 1 / 3;
-    background: var(--highlight-color, #00b4d8);
+    background: var(--pimary-color-light-1);
     color: #fff;
     border: none;
-    border-radius: 0.7em;
     padding: 0.9em;
-    font-size: 1rem;
-    font-weight: 600;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease;
   }
 
   button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 180, 216, 0.4);
   }
 </style>
