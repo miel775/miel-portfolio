@@ -1,13 +1,15 @@
 <script>
     import Background from "$lib/components/background/background.svelte";
-    import Section from "$lib/components/section.svelte";
+    import Section from "$lib/components/sections/AboutSection.svelte";
     import NavigationBar from '$lib/components/navigation-bar.svelte';
     import Contact from '$lib/components/contact-form.svelte';
     import Footer from '$lib/components/footer.svelte';
 
     import Windmill from '$lib/assets/library/windmill.svelte';
     import Brightonpier from '$lib/assets/library/brighton-pier.svelte';
-    import Tokyofacade from '$lib/assets/library/tokyo-facade.svelte';
+    import BrightonRowHouse1 from '$lib/assets/library/brighton-row-house-pink.svelte';
+    import BrightonRowHouse2 from '$lib/assets/library/brighton-row-house-yellow.svelte';
+    import BrightonRowHouse3 from '$lib/assets/library/brighton-row-house-blue.svelte';
     import BrightonPier from "$lib/assets/library/brighton-pier.svelte";
     import TokyoFacade from "$lib/assets/library/tokyo-facade.svelte";
 </script>
@@ -21,8 +23,10 @@
     <Windmill/> 
 </div>
 
-<div id="tokyo-facade">
-    <TokyoFacade />
+<div id="brighton-row-house">
+    <BrightonRowHouse1 />
+    <BrightonRowHouse2 />
+    <BrightonRowHouse3 />
 </div>
 
 <div id="brighton-pier">
@@ -67,12 +71,11 @@
         width: 40em;
     }
 
-    #tokyo-facade {
+    #brighton-row-house {
         position: absolute;
-        left: 75%;
-        top: 60%;
-        z-index: 2;
-        width: 10em;
+        width: 100px;
+        left: 80vw;
+        top: -20vh;
 
     }
 </style>

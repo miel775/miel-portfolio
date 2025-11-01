@@ -27,6 +27,7 @@
  */
 declare module '$env/static/private' {
 	export const TERM_PROGRAM: string;
+	export const rvm_bin_path: string;
 	export const NODE: string;
 	export const INIT_CWD: string;
 	export const TERM: string;
@@ -41,13 +42,14 @@ declare module '$env/static/private' {
 	export const npm_config_noproxy: string;
 	export const npm_config_local_prefix: string;
 	export const USER: string;
-	export const VSCODE_LOGIN_INITIALIZED: string;
 	export const COMMAND_MODE: string;
 	export const npm_config_globalconfig: string;
+	export const rvm_path: string;
 	export const SSH_AUTH_SOCK: string;
 	export const VSCODE_PROFILE_INITIALIZED: string;
 	export const __CF_USER_TEXT_ENCODING: string;
 	export const npm_execpath: string;
+	export const rvm_prefix: string;
 	export const PATH: string;
 	export const npm_package_json: string;
 	export const npm_config_engine_strict: string;
@@ -70,6 +72,7 @@ declare module '$env/static/private' {
 	export const npm_package_version: string;
 	export const XPC_SERVICE_NAME: string;
 	export const VSCODE_INJECTION: string;
+	export const rvm_version: string;
 	export const HOME: string;
 	export const SHLVL: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
@@ -114,6 +117,7 @@ declare module '$env/static/public' {
 declare module '$env/dynamic/private' {
 	export const env: {
 		TERM_PROGRAM: string;
+		rvm_bin_path: string;
 		NODE: string;
 		INIT_CWD: string;
 		TERM: string;
@@ -128,13 +132,14 @@ declare module '$env/dynamic/private' {
 		npm_config_noproxy: string;
 		npm_config_local_prefix: string;
 		USER: string;
-		VSCODE_LOGIN_INITIALIZED: string;
 		COMMAND_MODE: string;
 		npm_config_globalconfig: string;
+		rvm_path: string;
 		SSH_AUTH_SOCK: string;
 		VSCODE_PROFILE_INITIALIZED: string;
 		__CF_USER_TEXT_ENCODING: string;
 		npm_execpath: string;
+		rvm_prefix: string;
 		PATH: string;
 		npm_package_json: string;
 		npm_config_engine_strict: string;
@@ -157,6 +162,7 @@ declare module '$env/dynamic/private' {
 		npm_package_version: string;
 		XPC_SERVICE_NAME: string;
 		VSCODE_INJECTION: string;
+		rvm_version: string;
 		HOME: string;
 		SHLVL: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;

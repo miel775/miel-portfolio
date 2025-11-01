@@ -6,13 +6,15 @@
 
     import Project from '$lib/components/project-display.svelte'
 
-    gsap.registerPlugin(ScrollTrigger)
-    gsap.registerPlugin(MorphSVGPlugin)
+
+
+gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(MorphSVGPlugin)
 </script>
 
 <section>
-  <h2 id="title">Projects</h2>
-  <p id="content">These are my projects I have worked on.</p>
+  <h2 id="title">Portfolio</h2>
+  <p id="content">This is my porfolio</p>
 </section>
 
 <style>

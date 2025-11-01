@@ -9,6 +9,8 @@
     import ShapeThree from '$lib/assets/background/shape-3.svelte'
     import ShapeFour from '$lib/assets/background/shape-4.svelte'
     import ShapeFive from '$lib/assets/background/shape-5.svelte'
+    
+    import GrainyFilter from '$lib/assets/background/GrainyFilter.svelte';
 
 </script>
 
@@ -20,18 +22,33 @@
     <ShapeFive />
 </div>
 
+<GrainyFilter/>
+
+
 <style>
     #background {
-        background-color: var(--primary-color);
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        position: fixed;
-        right: 0;
-        top: 0;
-        overflow: hidden;
-        z-index: -1;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: var(--primary-color);
+		overflow: hidden;
+		z-index: -999;
     }
+
+	#grainy-bg {
+		position: fixed;
+		top: 0;
+        left: -50em;
+		width: 200%;
+		height: 100%;
+		opacity: 0.9; 
+		pointer-events: none; 
+		z-index: -1; 
+		mix-blend-mode: overlay;
+		object-fit: cover;
+	}
 </style>
 
 
