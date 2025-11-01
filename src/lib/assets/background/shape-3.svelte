@@ -60,11 +60,3 @@ let randomDuration = Math.random() * 10 + 10;
 
 
 <ShapeThree />
-
-
-<style>
-#shape-3 {
-    position: absolute;
-	scale: 1.5;
-}
-</style>

@@ -58,12 +58,3 @@ let randomDuration = Math.random() * 10 + 10;
 
 <ShapeTwo />
 
-<style>
-#shape-2 {
-    position: absolute;
-	top: -20%;
-	left: -200px;
-    filter: blur(30px);
-	scale: 2;
-}
-</style>

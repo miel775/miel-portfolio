@@ -58,13 +58,3 @@
 
 <ShapeOne />
 
-<style>
-
-#shape-1 {
-    position: absolute;
-	top: 44%;
-	left: -300px;
-	scale: 1.5;
-    filter: blur(25px);
-}
-</style>
