@@ -18,16 +18,33 @@
 
 <style>
     nav {
-        position: sticky;
-        display: flex;
-        justify-content: space-between;
-        top: 0;
-        left: 0;
+        display: grid;
+        grid-template-columns: 10% 80%;
         padding: var(--padding-desktop);
+        background-color: var(--primary-color);
+        align-items: center;
     }
 
-    nav a {
-        padding: var(--padding-desktop);
-        color: var(--neutral-color-light-4);
+    #logo {
+        display: flex;
+        justify-content: center;
     }
+
+    #navigation-links  {
+        display: flex;
+        gap: 1em;
+        justify-content: flex-end;
+    
+    a {
+        width: 10vw;
+        height: 5vh;
+        color: var(--neutral-color-light-4);
+        background-color: var(--pimary-color-light-1);
+        border: var(--neutral-color-light-4) solid 2px;
+        gap: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 </style>

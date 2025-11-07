@@ -11,18 +11,37 @@
   gsap.registerPlugin(MorphSVGPlugin);
 </script>
 
-<section>
-  <h2 id="title">Portfolio</h2>
-  <p id="content">
-    Welcome to my portfolio, here you can take a closer look into my personal
-    world. My name is Miel van Sleeuwen I am 24 years old and I am from the
-    Netherlands!
-    <br />
-    This is my portfolio take a careful look into my world! My mantra is never stop
-    exploring!I am convinced the world has so much to offer with a combination of
-    creativity and adventure. Experience in Front end Web Development, Video creating
-    and Urban Design.
-  </p>
+<section id="about" class="about-section" aria-labelledby="about-title">
+  <h2 id="about-title">About</h2>
+
+  <div class="about-content">
+    <div class="about-text">
+      <p>
+        Hi, I’m <strong>Miel van Sleeuwen</strong> — welcome to my portfolio!<br />
+        I’m a <strong>24-year-old creative</strong> from the <strong>Netherlands</strong> with a passion for exploring new ideas through design and technology.
+      </p>
+
+      <p>
+        My mantra is <em>“never stop exploring”</em> — I believe creativity and adventure go hand in hand.  
+        Im convinced the world has so much to offer when we combine <strong>creativity</strong> with <strong>curiosity</strong>.
+      </p>
+
+      <p>
+        I have experience in <strong>Front-End Web Development</strong>, <strong>Video Creation</strong>, and <strong>Urban Design</strong>, blending visual storytelling with functional design to bring ideas to life.
+      </p>
+    </div>
+
+    <figure class="about-image">
+      <img 
+        src="src/lib/assets/about/miel.png" 
+        alt="Portrait of Miel van Sleeuwen"
+        width="300" 
+        height="400" 
+        loading="lazy"
+      />
+      <figcaption>Miel van Sleeuwen — Creative Explorer</figcaption>
+    </figure>
+  </div>
 </section>
 
 <style>
@@ -34,17 +53,7 @@
     padding: var(--padding-desktop);
   }
 
-  #title {
-    position: absolute;
-    top: -0.7em;
-    left: em;
-    margin: 0;
-    width: 100%;
-  }
-
-  #content {
-    margin-top: calc(1em + 0.5rem);
-    padding-top: 1.5em;
-    margin-left: 0.7em;
+  img {
+    border-radius: 5%;
   }
 </style>

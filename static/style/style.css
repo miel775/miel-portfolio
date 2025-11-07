@@ -95,19 +95,15 @@ h1 {
 section h2 {
     pointer-events: none;
     color: var(--neutral-color-light-4);
-    font-family: 'Garet Heavy', sans-serif;
-    font-weight: 850;
-    -webkit-text-stroke: var(--border-desktop);
-    text-transform: uppercase;
+    font-family: 'Jersey 20';
+    font-size: 32px;
 
     @media (max-width: 1080px) {
-        font-size: var(--h2-tablet);
-        -webkit-text-stroke: var(--border-tablet);
+        font-size: 32px;
     }
 
     @media (max-width: 720px) {
-        font-size: var(--h2-mobile);
-        -webkit-text-stroke: var(--border-mobile);
+        font-size: 24px;
     }
 }
 
@@ -194,7 +190,7 @@ li {
 }
 
 
-body {
+main {
     margin: var(--margin-desktop);
 
     @media (max-width: 1080px) {
@@ -208,11 +204,10 @@ body {
 
 section {
     display: inline-block;
-    background-color: var(--accent-color-2);
+    background-color: var(--neutral-color-light-3);
     min-height: var(--section-height);
     min-width: var(--section-width);
     display: flex;
-    border-radius: var(--section-border-radius);
     justify-content: flex-start;
     margin: var(--margin-desktop);
 }
@@ -227,12 +222,8 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-left: -6%;
-        margin-right: -6%;
-        margin-bottom: -6%;
         background-color: var(--neutral-color-light-1);
         color: var(--neutral-color-light-4);
-        padding: var(--padding-desktop);
         text-decoration: none;
 }
 

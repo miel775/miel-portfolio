@@ -6,6 +6,8 @@
 
     import Project from '$lib/components/project-display.svelte'
 
+    import PortolioPreview from "$lib/assets/svg/portolio-preview.svelte"
+
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -15,6 +17,7 @@ gsap.registerPlugin(MorphSVGPlugin)
 <section>
   <h2 id="title">Portfolio</h2>
   <p id="content">This is my porfolio</p>
+  <PortolioPreview/>
 </section>
 
 <style>

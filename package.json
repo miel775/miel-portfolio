@@ -17,7 +17,21 @@
 		"vite": "^7.1.7"
 	},
 	"dependencies": {
+		"@11ty/eleventy": "^3.1.2",
 		"@fortawesome/fontawesome-svg-core": "^7.1.0",
 		"gsap": "^3.13.0"
-	}
+	},
+	"description": "Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).",
+	"main": "svelte.config.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/miel775/miel-portfolio.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/miel775/miel-portfolio/issues"
+	},
+	"homepage": "https://github.com/miel775/miel-portfolio#readme"
 }

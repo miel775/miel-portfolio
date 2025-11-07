@@ -32,7 +32,7 @@
 		left: 0;
 		width: 100vw;
 		height: 100vh;
-		background-color: var(--primary-color);
+		background-color:  var(--accent-color-2);
 		overflow: hidden;
 		z-index: -999;
     }

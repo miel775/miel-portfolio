@@ -159,7 +159,4 @@
         top: 4em;
         scale: 1.2;
     }
-
-
-
 </style>

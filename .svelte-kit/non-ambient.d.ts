@@ -27,20 +27,21 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/about" | "/contact" | "/library" | "/portfolio" | "/projects" | "/projects/[project]";
+		RouteId(): "/" | "/about" | "/blogs" | "/contact" | "/library" | "/portfolio" | "/projects" | "/projects/[project]";
 		RouteParams(): {
 			"/projects/[project]": { project: string }
 		};
 		LayoutParams(): {
 			"/": { project?: string };
 			"/about": Record<string, never>;
+			"/blogs": Record<string, never>;
 			"/contact": Record<string, never>;
 			"/library": Record<string, never>;
 			"/portfolio": Record<string, never>;
 			"/projects": { project?: string };
 			"/projects/[project]": { project: string }
 		};
-		Pathname(): "/" | "/about" | "/about/" | "/contact" | "/contact/" | "/library" | "/library/" | "/portfolio" | "/portfolio/" | "/projects" | "/projects/" | `/projects/${string}` & {} | `/projects/${string}/` & {};
+		Pathname(): "/" | "/about" | "/about/" | "/blogs" | "/blogs/" | "/contact" | "/contact/" | "/library" | "/library/" | "/portfolio" | "/portfolio/" | "/projects" | "/projects/" | `/projects/${string}` & {} | `/projects/${string}/` & {};
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
 		Asset(): "/robots.txt" | "/style/style.css" | string & {};
 	}
