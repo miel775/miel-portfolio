@@ -22,7 +22,9 @@
     <ShapeFive />
 </div>
 
+<div id="grainy-bg">
 <GrainyFilter/>
+</div>
 
 
 <style>

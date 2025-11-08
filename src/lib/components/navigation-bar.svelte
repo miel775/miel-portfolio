@@ -9,20 +9,33 @@
     </a>
 
     <div id="navigation-links">
-        <a href="/portfolio"> Portfolio </a>
-        <a href="/about"> About </a>
-        <a href="/projects"> Projects </a>
-        <a href="/contact"> Contact </a>
+        <a href="/portfolio">
+            <img src="src/lib/assets/library/ico/portfolio-icon.png">
+            <p>Portfolio</p>
+        </a>
+        <a href="/about">
+            <img src="src/lib/assets/library/ico/about-me.png">
+            <p>About</p>
+        </a>
+        <a href="/projects">
+            <img src="src/lib/assets/library/ico/projects-icon.png">
+            <p>Projects</p>
+        </a>
+        <a href="/contact"> 
+            <img src="src/lib/assets/library/ico/contact-icon.png">
+            <p>Contact</p>
+        </a>
     </div>
 </nav>
 
 <style>
     nav {
         display: grid;
-        grid-template-columns: 10% 80%;
+        grid-template-columns: 10% 90%;
         padding: var(--padding-desktop);
         background-color: var(--primary-color);
         align-items: center;
+        margin: -0.5em;
     }
 
     #logo {
@@ -34,6 +47,14 @@
         display: flex;
         gap: 1em;
         justify-content: flex-end;
+
+    p {
+        display: block;
+
+    @media (max-width: 1080px) {
+        display: none;
+    }
+    }
     
     a {
         width: 10vw;
@@ -46,5 +67,12 @@
         justify-content: center;
         align-items: center;
     }
+
+    a:hover {
+        background-color: var(--accent-color-2-dark-3);
+        animation-duration: 0.3s;
+        text-decoration: none;
+    }
+
 }
 </style>

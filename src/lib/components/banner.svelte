@@ -9,11 +9,21 @@
     import Miel from "$lib/assets/svg/miel-banner.svelte";
 
     import Windmill from "$lib/assets/library/windmill.svelte";
+
+    onMount(() => {
+    // Ensure all videos autoplay (some browsers block it on first load)
+    const videos = document.querySelectorAll("video");
+    videos.forEach(video => {
+      video.play().catch(() => {
+        // Retry autoplay if it failed initially
+        setTimeout(() => video.play(), 1000);
+      });
+    });
+  });
 </script>
 
 <div id="banner">
-
-        <div id="miel-vector">
+    <div id="miel-vector">
         <svg
             width="265"
             height="314"
@@ -240,15 +250,27 @@
                 </clipPath>
             </defs>
         </svg>
-        </div>
+    </div>
 
+    <div id="content">
         <div id="title">
-            <h1 id="miel">Miel van Sleeuwen</h1>
+            <h1 id="miel">Miel</h1>
+            <h1 id="van">van</h1>
+            <h1 id="sleeuwen">Sleeuwen</h1>
         </div>
 
         <div id="videoframe">
             <div id="video-banner-1">
-                <video autoplay muted loop playsinline>
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="auto"
+                    width="189"
+                    height="117"
+                    style="object-fit: cover;"
+                >
                     <source
                         src="./src/lib/assets/banner/banner-video-1.mp4"
                         type="video/mp4"
@@ -258,7 +280,16 @@
             </div>
 
             <div id="video-banner-2">
-                <video autoplay muted loop playsinline>
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="auto"
+                    width="189"
+                    height="117"
+                    style="object-fit: cover;"
+                >
                     <source
                         src="./src/lib/assets/banner/banner-video-2.mp4"
                         type="video/mp4"
@@ -268,7 +299,16 @@
             </div>
 
             <div id="video-banner-3">
-                <video autoplay muted loop playsinline>
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="auto"
+                    width="94"
+                    height="117"
+                    style="object-fit: cover;"
+                >
                     <source
                         src="./src/lib/assets/banner/banner-video-3.mp4"
                         type="video/mp4"
@@ -276,18 +316,58 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
+        </div>
     </div>
 </div>
 
 <style>
+    h1 {
+        color: var(--primary-color);
+    }
     #banner {
-        height: 100vh;
-        width: 100vw;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 0.5em;
+
+        @media (max-width: 1080px) {
+            scale: 0.8;
+            top: 1em;
+        }
+
+        @media (max-width: 720px) {
+            scale: 0.7;
+            top: 2em;
+        }
+    }
+
+    #content {
+        position: relative;
+        top: -50px;
+        left: 15px;
+    }
+
+    #title {
+        line-height: 55%;
+        position: relative;
+        right: 25px;
     }
 
     #videoframe {
         display: flex;
         gap: 1em;
-        scale: 0.5;
+    }
+
+    #van {
+        font-size: 64px;
+        position: relative;
+        bottom: 3px;
+        left: 15px;
+    }
+
+    #sleeuwen {
+        font-size: 72px;
+        position: relative;
+        left: 50px;
     }
 </style>

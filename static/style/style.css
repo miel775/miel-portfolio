@@ -225,6 +225,7 @@ footer {
         background-color: var(--neutral-color-light-1);
         color: var(--neutral-color-light-4);
         text-decoration: none;
+        overflow: hidden;
 }
 
 ul {
