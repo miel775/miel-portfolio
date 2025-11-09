@@ -45,7 +45,7 @@
         left: -50em;
 		width: 200%;
 		height: 100%;
-		opacity: 0.9; 
+		opacity: 0.4; 
 		pointer-events: none; 
 		z-index: -1; 
 		mix-blend-mode: overlay;

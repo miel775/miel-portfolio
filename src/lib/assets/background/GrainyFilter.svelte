@@ -2,8 +2,8 @@
 		<filter id="noiseFilter">
 			<feTurbulence 
 				type="fractalNoise" 
-				baseFrequency="0.55" 
-				numOctaves="3" 
+				baseFrequency="0.75" 
+				numOctaves="5" 
 				stitchTiles="stitch" />
 		</filter>
 		<rect width="200%" height="200%" filter="url(#noiseFilter)" />

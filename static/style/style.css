@@ -234,7 +234,7 @@ ul {
     padding: 0;
 }
 
-import '@fontsource/jersey-20-charted';
+import "@fontsource/jersey-20-charted"
 
 @font-face {
     font-family: 'Garet Book';
