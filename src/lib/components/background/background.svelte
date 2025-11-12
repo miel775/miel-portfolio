@@ -50,6 +50,10 @@
 		z-index: -1; 
 		mix-blend-mode: overlay;
 		object-fit: cover;
+
+		@media (max-width: 720px) {
+        	display: none;
+    }
 	}
 </style>
 

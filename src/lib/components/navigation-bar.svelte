@@ -9,19 +9,19 @@
     </a>
 
     <div id="navigation-links">
-        <a href="/portfolio">
+        <a href="/">
             <img src="src/lib/assets/library/ico/portfolio-icon.png">
             <p>Portfolio</p>
         </a>
-        <a href="/about">
+        <a href="/">
             <img src="src/lib/assets/library/ico/about-me.png">
             <p>About</p>
         </a>
-        <a href="/projects">
+        <a href="/">
             <img src="src/lib/assets/library/ico/projects-icon.png">
             <p>Projects</p>
         </a>
-        <a href="/contact"> 
+        <a href="/"> 
             <img src="src/lib/assets/library/ico/contact-icon.png">
             <p>Contact</p>
         </a>
@@ -41,6 +41,7 @@
     #logo {
         display: flex;
         justify-content: center;
+        height: 3em;
     }
 
     #navigation-links  {
