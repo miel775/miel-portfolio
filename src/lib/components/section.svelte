@@ -21,8 +21,8 @@
 
     <div id="text">
       <p>
-        Hi, I’m <strong>Miel van Sleeuwen</strong> — welcome to my portfolio!<br />
-        I’m a <strong>24-year-old creative</strong> from the <strong>Netherlands</strong> with a passion for exploring new ideas through design and technology.
+        Hi, I am <strong>Miel van Sleeuwen</strong> welcome to my portfolio!<br />
+        I am a <strong>25-year-old creative</strong> from the <strong>Netherlands</strong> with a passion for exploring new ideas through design and technology.
       </p>
 
       <p>
