@@ -43,6 +43,6 @@ declare module "$app/types" {
 		};
 		Pathname(): "/" | "/about" | "/about/" | "/blogs" | "/blogs/" | "/contact" | "/contact/" | "/library" | "/library/" | "/portfolio" | "/portfolio/" | "/projects" | "/projects/" | `/projects/${string}` & {} | `/projects/${string}/` & {};
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/robots.txt" | "/style/style.css" | string & {};
+		Asset(): "/.DS_Store" | "/robots.txt" | "/style/style.css" | string & {};
 	}
 }
