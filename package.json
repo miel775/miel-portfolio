@@ -1,42 +1,6 @@
-{
-	"name": "miel-portfolio",
-	"private": true,
-	"version": "0.0.1",
-	"type": "module",
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"prepare": "svelte-kit sync || echo ''",
-		"build": "svelte-kit build",
+"scripts": {
+  "dev": "svelte-kit dev",
+  "build": "svelte-kit build",
   "preview": "svelte-kit preview",
-  "dev": "svelte-kit dev"
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "^6.1.0",
-		"@sveltejs/adapter-vercel": "^6.1.2",
-		"@sveltejs/kit": "^2.43.2",
-		"@sveltejs/vite-plugin-svelte": "^6.2.0",
-		"svelte": "^5.39.5",
-		"vite": "^7.1.7"
-	},
-	"dependencies": {
-		"@11ty/eleventy": "^3.1.2",
-		"@fortawesome/fontawesome-svg-core": "^7.1.0",
-		"gsap": "^3.13.0"
-	},
-	"description": "Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).",
-	"main": "svelte.config.js",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/miel775/miel-portfolio.git"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/miel775/miel-portfolio/issues"
-	},
-	"homepage": "https://github.com/miel775/miel-portfolio#readme"
-	
+  "prepare": "svelte-kit sync"
 }
