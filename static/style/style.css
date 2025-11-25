@@ -222,10 +222,18 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
+        padding: var(--padding-desktop);
         background-color: var(--neutral-color-light-1);
         color: var(--neutral-color-light-4);
         text-decoration: none;
         overflow: hidden;
+        width: 100%;
+        justify-content: space-around;
+
+        @media (max-width: 1080px) {
+            display: flex;
+            flex-direction: column;
+    }
 }
 
 ul {

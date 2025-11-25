@@ -336,7 +336,7 @@
         }
 
         @media (max-width: 720px) {
-            scale: 0.7;
+            scale: 0.5;
             top: 2em;
         }
     }

@@ -7,6 +7,7 @@
     import Banner from '$lib/components/banner.svelte'
 
     import Portfoliopreview from '$lib/assets/svg/portolio-preview.svelte'
+    import Videoofme from '$lib/components/video-of-me.svelte'
 
 
     import AboutSection from "$lib/components/sections/AboutSection.svelte"
@@ -24,6 +25,9 @@
 <Background />
 
 <Section/>
+
+<Videoofme />
+
 
 </main>
 
