@@ -1,0 +1,30 @@
+:root {
+  /* darker-colors */
+  --l-dark: 0;
+  --l-dark-8: 8;
+  --l-dark-13: 13;
+  --l-dark-18: 18;
+  --l-dark-23: 23;
+
+  /* lighter-colors */
+  --l-light-73: 73;
+  --l-light-78: 78;
+  --l-light-83: 83;
+  --l-light-88: 88;
+  --l-light-93: 93;
+  --l-light: 100;
+
+  /* saturation */
+  --saturation-none: 0;
+  --saturation-general: 78;
+
+
+  --primary-color:
+}
+body {
+  background-color: black;
+}
+
+.ground {
+
+}

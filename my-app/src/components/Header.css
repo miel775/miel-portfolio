@@ -1,0 +1,11 @@
+.main-header {
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+  background: #222;
+}
+
+.main-header a {
+  color: white;
+  text-decoration: none;
+}
