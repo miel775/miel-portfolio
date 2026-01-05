@@ -1,0 +1,67 @@
+:root {
+  /* darker-colors */
+  --l-dark: 0%;
+  --l-dark-8: 8%;
+  --l-dark-13: 13%;
+  --l-dark-18: 18%;
+  --l-dark-23: 23%;
+
+  /* lighter-colors */
+  --l-light-73: 73%;
+  --l-light-78: 78%;
+  --l-light-83: 83%;
+  --l-light-88: 88%;
+  --l-light-93: 93%;
+  --l-light: 100%;
+
+  /* saturation */
+  --saturation-none: 0%;
+  --saturation-general: 78%;
+
+
+  --primary-color-darker: hsl(233,var(--saturation-general), var(--l-dark-8));
+  --primary-color-dark: hsl(233,var(--saturation-general), var(--l-dark-13));
+  --primary-color: hsl(233,var(--saturation-general), var(--l-dark-18));
+
+  --accent-color: hsl(233,var(--saturation-general), var(--l-light-73));
+  --accent-color-light: hsl(233,var(--saturation-general), var(--l-light-78));
+  --accent-color-lighter: hsl(233,var(--saturation-general), var(--l-light-83));
+
+
+  --border-whtie: white 1px solid;
+}
+
+
+body {
+  background-color: var(--accent-color);
+}
+
+h1 {
+  font-family: "Garet Heavy";
+  font-size: clamp(84px, 100%, 36px);
+}
+h2 {
+  font-family: "Garet Book";
+  font-size: clamp(64px, 100%, 36px);
+}
+
+@font-face {
+ font-family: "Jersey-20";
+ src: local("Jersey20"),
+  url("./fonts/Jersey20-Regular.ttf") format("truetype");
+ font-weight: bold;
+}
+
+@font-face {
+ font-family: "Garet Book";
+ src: local("Garet"),
+  url("./fonts/Garet-Book.ttf") format("truetype");
+ font-weight: bold;
+}
+
+@font-face {
+ font-family: "Garet Heavy";
+ src: local("Garet"),
+  url("./fonts/Garet-Heavy.ttf") format("truetype");
+ font-weight: bold;
+}
