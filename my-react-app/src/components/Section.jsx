@@ -4,9 +4,9 @@ function Section() {
   return (
     <section class="main-section">
         <div class="tab-title-section"> 
-            {svgData}
+            <img src='src/assets/icons/about-icon.png'></img>
 
-            <p> {text} </p>
+            <p> Title </p>
 
             <div class="tab-icons">
                 <div class="main-section-block"></div>
@@ -15,7 +15,7 @@ function Section() {
             </div>
         </div>
         <div class="main-section-content">
-            {content}
+            <p> This is just a story about how we have met</p>
         </div>
     </section>
   );

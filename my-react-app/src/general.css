@@ -27,8 +27,13 @@
   --accent-color-light: hsl(233,var(--saturation-general), var(--l-light-78));
   --accent-color-lighter: hsl(233,var(--saturation-general), var(--l-light-83));
 
+  /* neutral colors */
+    --neutral-color: hsl(0,var(--saturation-none),78%); 
+    --neutral-color-light: hsl(0,var(--saturation-none),83%); 
+    --neutral-color-lighter: hsl(0,var(--saturation-none),88%); 
 
-  --border-whtie: white 1px solid;
+  --border-white: white 1px solid;
+    --border-black: black 1px solid;
 }
 
 
@@ -43,6 +48,10 @@ h1 {
 h2 {
   font-family: "Garet Book";
   font-size: clamp(64px, 100%, 36px);
+}
+
+p {
+    font-family: "Jersey-20";
 }
 
 @font-face {
