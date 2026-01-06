@@ -4,22 +4,24 @@
   padding: 16px;
   background: var(--primary-color);
   height: 60px;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .main-header a {
-  color: white;
-  background-color: var(--primary-color-darker);
-  text-decoration: none;
-  height: 1em;
-  padding: 1em;
-  display: flex;
-  align-items: center;
-  border: var(--border-whtie);
-  font-family: 'Jersey-20';
+
+
+  &:hover {
+    background-color: var(--primary-color-light);
+    transition-duration: var(--transition);
+  }
 }
 
 .navigation {
   display: flex;
   gap: 1em;
+}
+
+.logo-header {
+  overflow: visible;
+  height: fit-content;
 }

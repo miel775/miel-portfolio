@@ -2,6 +2,9 @@
   width: 80vw;
   height: fit-content;
   background-color: var(--neutral-color-lighter);
+  position: relative;
+  left: 8%;
+  top: 10%;
 }
 
 .main-section-block {
@@ -16,7 +19,31 @@
     }
 }
 
+.main-section-content {
+    padding: 1em;
+}
+
 .tab-icons {
     display: flex;
     gap: 0.2em;
 }
+
+.tab-title-section {
+    background-color: var(--primary-color);
+    color: var(--neutral-color-lighter);
+    display: flex;
+    justify-content: space-between;
+    height: 1.2em;
+    padding: 0.3em;
+}
+
+.tab-title {
+    height: 1.2em;
+    display: flex;
+     p {
+        margin-top: 2px;
+        margin-left: 2px;
+        font-size: 20px;
+     }
+}
+

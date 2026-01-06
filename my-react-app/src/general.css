@@ -18,22 +18,35 @@
   --saturation-none: 0%;
   --saturation-general: 78%;
 
-
   --primary-color-darker: hsl(233,var(--saturation-general), var(--l-dark-8));
   --primary-color-dark: hsl(233,var(--saturation-general), var(--l-dark-13));
   --primary-color: hsl(233,var(--saturation-general), var(--l-dark-18));
+  --primary-color-light: hsl(233,var(--saturation-general), 23%);
+  --primary-color-lighter: hsl(233,var(--saturation-general), 28%);
 
+  --accent-color-darker: hsl(233,var(--saturation-general), 63%);
+  --accent-color-dark: hsl(233,var(--saturation-general), 68%);
   --accent-color: hsl(233,var(--saturation-general), var(--l-light-73));
   --accent-color-light: hsl(233,var(--saturation-general), var(--l-light-78));
   --accent-color-lighter: hsl(233,var(--saturation-general), var(--l-light-83));
+
+  --accent-color-2-darker: hsl(35, var(--saturation-general), 38%);
+  --accent-color-2-dark: hsl(35, var(--saturation-general), 43%);
+  --accent-color-2: hsl(35, var(--saturation-general), 48%);
+  --accent-color-2-light: hsl(35, var(--saturation-general), 53%);
+  --accent-color-2-lighter: hsl(35, var(--saturation-general), 58%);
 
   /* neutral colors */
     --neutral-color: hsl(0,var(--saturation-none),78%); 
     --neutral-color-light: hsl(0,var(--saturation-none),83%); 
     --neutral-color-lighter: hsl(0,var(--saturation-none),88%); 
 
+  /* border */
   --border-white: white 1px solid;
-    --border-black: black 1px solid;
+  --border-black: black 1px solid;
+
+  /* transition */
+  --transition: 0.3s;
 }
 
 
@@ -52,6 +65,24 @@ h2 {
 
 p {
     font-family: "Jersey-20";
+}
+
+.button {
+  color: white;
+  background-color: var(--primary-color-darker);
+  text-decoration: none;
+  height: 1em;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  border: var(--border-white);
+  
+  a {
+    font-family: "Jersey-20";
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--neutral-color-lighter)
+  }
 }
 
 @font-face {

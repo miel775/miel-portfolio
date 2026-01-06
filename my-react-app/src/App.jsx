@@ -1,12 +1,14 @@
 import './general.css';
 import Section from './components/Section'
-import Header from './components/Header'; 
+import Header from './components/header'; 
 
 function App() {
   return (
     <div className="App">
       <Header />
       <main>
+        <Section />
+
         <Section />
       </main>
     </div>

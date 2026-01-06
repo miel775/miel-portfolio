@@ -4,9 +4,10 @@ function Section() {
   return (
     <section class="main-section">
         <div class="tab-title-section"> 
-            <img src='src/assets/icons/about-icon.png'></img>
-
-            <p> Title </p>
+            <div class="tab-title">
+              <img src='src/assets/icons/about-icon.png'></img>
+              <p> About </p>
+            </div>
 
             <div class="tab-icons">
                 <div class="main-section-block"></div>
@@ -15,7 +16,7 @@ function Section() {
             </div>
         </div>
         <div class="main-section-content">
-            <p> This is just a story about how we have met</p>
+            <p> Hello there my name is Miel I am 25 years old which is a quarter that is something you need to know haha</p>
         </div>
     </section>
   );
