@@ -1,11 +1,11 @@
-import './Header.css'; 
-import Logo from './Logo.jsx'
+import './Header.css';
+import Logo from '../assets/logo/Logo';
 
 function Header() {
   return (
     <header className="main-header">
       <div class="logo-header">
-      <Logo />
+        <Logo width={64} height={64} />
       </div>
       <div className="navigation">
         <div class="button">

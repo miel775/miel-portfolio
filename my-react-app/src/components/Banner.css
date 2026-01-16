@@ -1,0 +1,6 @@
+#banner-portfolio {
+  display: inline-block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--accent-color-2-light);
+}

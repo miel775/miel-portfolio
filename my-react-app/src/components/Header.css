@@ -5,15 +5,7 @@
   background: var(--primary-color);
   height: 60px;
   justify-content: space-between;
-}
-
-.main-header a {
-
-
-  &:hover {
-    background-color: var(--primary-color-light);
-    transition-duration: var(--transition);
-  }
+  align-items: center;
 }
 
 .navigation {
