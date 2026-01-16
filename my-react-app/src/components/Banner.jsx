@@ -1,4 +1,5 @@
 import './Banner.css';
+import Sun from '../assets/library/sun'
 
 const currentDate = new Date()
 
@@ -52,6 +53,8 @@ function Banner() {
         backgroundColor: `hsl(${hue}, 78%, ${lightness}%)`,
         transition: 'background-color 1s linear',}}
         >
+
+            <Sun />
     </div>
     );
 }
