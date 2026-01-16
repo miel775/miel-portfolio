@@ -6,8 +6,12 @@ const currentDate = new Date()
 console.log(currentDate.getHours())
 console.log(currentDate.getMinutes())
 
-let minutesNow = currentDate.getMinutes()
-let hoursNow = currentDate.getHours()
+const minutes = currentDate.getMinutes()
+const hours = currentDate.getHours()
+const time = hours + minutes / 60;
+
+let hue = 210;
+let lightness = 78;
 
 // hsl should be 233 from 19:30 untill 8:30
 
@@ -22,9 +26,10 @@ let hoursNow = currentDate.getHours()
 
 function Banner() {
   return (
-    <div id="banner-portfolio" style="background-color=hsl{variableHue},78%,{variableLightness}" >
-
-        
+    <div id="banner-portfolio"   style={{
+        backgroundColor: `hsl(${hue}, 78%, ${lightness}%)`,
+        transition: 'background-color 1s linear',}}
+        >
     </div>
     );
 }
