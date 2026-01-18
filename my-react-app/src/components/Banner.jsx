@@ -1,5 +1,10 @@
 import './Banner.css';
 import Sun from '../assets/library/sun'
+import Ground from '../assets/library/ground'
+import BenchA from '../assets/library/benchA';  
+import HouseABoekel from '../assets/library/houseA';
+import Tree from '../assets/library/tree'
+import Miel from '../assets/library/miel'
 
 const currentDate = new Date()
 
@@ -44,18 +49,21 @@ if (time >= 8 && time < 8.5) {
 // between 19:00 and 19:30 the hue should change from 210 to 236 and lightness from 78% to 18% precent
 
 
-
-
-
 function Banner() {
   return (
     <div id="banner-portfolio"   style={{
         backgroundColor: `hsl(${hue}, 78%, ${lightness}%)`,
         transition: 'background-color 1s linear',}}
         >
-
-            <Sun />
+      <Miel />
+      <Tree />
+      <BenchA />
+      <Ground />
+      <Sun />
+      <HouseABoekel />
     </div>
+
+
     );
 }
 

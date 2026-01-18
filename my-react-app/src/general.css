@@ -49,10 +49,16 @@
 
   /* transition */
   --transition: 0.3s;
+
+
+
+  /* color library */
+  --color-ground: hsl(96, 78%, 18%);
 }
 
 
 body {
+  margin: 0;
   background-color: var(--accent-color);
 }
 

@@ -1,129 +1,18 @@
-:root {
-  /* darker-colors */
-  --l-dark: 0%;
-  --l-dark-8: 8%;
-  --l-dark-13: 13%;
-  --l-dark-18: 18%;
-  --l-dark-23: 23%;
-
-  /* lighter-colors */
-  --l-light-73: 73%;
-  --l-light-78: 78%;
-  --l-light-83: 83%;
-  --l-light-88: 88%;
-  --l-light-93: 93%;
-  --l-light: 100%;
-
-  /* saturation */
-  --saturation-none: 0%;
-  --saturation-general: 78%;
-
-  --primary-color-darker: hsl(233,var(--saturation-general), var(--l-dark-8));
-  --primary-color-dark: hsl(233,var(--saturation-general), var(--l-dark-13));
-  --primary-color: hsl(233,var(--saturation-general), var(--l-dark-18));
-  --primary-color-light: hsl(233,var(--saturation-general), 23%);
-  --primary-color-lighter: hsl(233,var(--saturation-general), 28%);
-
-  --accent-color-darker: hsl(233,var(--saturation-general), 63%);
-  --accent-color-dark: hsl(233,var(--saturation-general), 68%);
-  --accent-color: hsl(233,var(--saturation-general), var(--l-light-73));
-  --accent-color-light: hsl(233,var(--saturation-general), var(--l-light-78));
-  --accent-color-lighter: hsl(233,var(--saturation-general), var(--l-light-83));
-
-  --accent-color-2-darker: hsl(35, var(--saturation-general), 38%);
-  --accent-color-2-dark: hsl(35, var(--saturation-general), 43%);
-  --accent-color-2: hsl(35, var(--saturation-general), 48%);
-  --accent-color-2-light: hsl(35, var(--saturation-general), 53%);
-  --accent-color-2-lighter: hsl(35, var(--saturation-general), 58%);
-
-  /* neutral colors */
-    --neutral-color: hsl(0,var(--saturation-none),78%); 
-    --neutral-color-light: hsl(0,var(--saturation-none),83%); 
-    --neutral-color-lighter: hsl(0,var(--saturation-none),88%);
-    
-    --neutral-color-dark: hsl(0,var(--saturation-none),13%);
-
-  /* border */
-  --border-white: white 1px solid;
-  --border-black: black 1px solid;
-
-  /* transition */
-  --transition: 0.3s;
-}
-
-
-body {
-  background-color: var(--accent-color);
-}
-
-h1 {
-  font-family: "Garet Heavy";
-  font-size: clamp(84px, 100%, 36px);
-}
-
-h2 {
-  font-family: "Garet Book";
-  font-size: clamp(64px, 100%, 36px);
-}
-
-p {
-    font-family: "Jersey-20";
-}
-
-a {
-  font-family: "Jersey-20";
-  text-decoration: none;
-}
-
-.button {
-  color: white;
-  background-color: var(--primary-color-lighter);
-  height: 2em;
-  width: 6em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: var(--border-white);
-
-  &:focus {
-    border: none;
-    border-inline: var(--border-white);
+@keyframes turning {
+  0% {
+    transform: rotate(0deg);
   }
 
-  &:hover {
-    background-color: var(--primary-color-dark);
-  }
-
-  &:disabled {
-    background-color: var(--neutral-color-dark);
-  }
-  
-  a {
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-    text-decoration: none;
-    color: var(--neutral-color-lighter)
+  100% {
+    transform: rotate(360deg);
   }
 }
 
-@font-face {
- font-family: "Jersey-20";
- src: local("Jersey20"),
-  url("./fonts/Jersey20-Regular.ttf") format("truetype");
- font-weight: bold;
-}
-
-@font-face {
- font-family: "Garet Book";
- src: local("Garet"),
-  url("./fonts/Garet-Book.ttf") format("truetype");
- font-weight: bold;
-}
-
-@font-face {
- font-family: "Garet Heavy";
- src: local("Garet"),
-  url("./fonts/Garet-Heavy.ttf") format("truetype");
- font-weight: bold;
+@keyframes cloud-move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(140vw);
+  }
 }
