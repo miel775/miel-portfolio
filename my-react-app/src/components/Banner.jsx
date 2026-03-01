@@ -1,20 +1,29 @@
-import './Banner.css';
 import Sun from '../assets/library/sun'
 import Ground from '../assets/library/ground'
 import BenchA from '../assets/library/benchA';  
-import HouseABoekel from '../assets/library/houseA';
 import Tree from '../assets/library/tree'
 import Miel from '../assets/library/miel'
+import Cloud from '../assets/library/cloud'
+import AmsterdamHouseA from '../assets/library/amsterdamHouseA';
+import AmsterdamHouseB from '../assets/library/amsterdamHouseB';
+import AmsterdamHouseC from '../assets/library/amsterdamHouseC';
+import AmsterdamHouseD from '../assets/library/amsterdamHouseD';
+import AmsterdamHouseE from '../assets/library/amsterdamHouseE';
+import './Banner.css'; 
+
+
+
 
 const currentDate = new Date()
-
-// get the current time in hours and minutes
-console.log(currentDate.getHours())
-console.log(currentDate.getMinutes())
 
 const minutes = currentDate.getMinutes()
 const hours = currentDate.getHours()
 const time = hours + minutes / 60;
+
+// cloudAmount
+const cloudAmount = Math.floor(Math.random() * (20 - 2 + 1)) + 2;
+
+const treeAmount = Math.floor(Math.random() * (80 - 2 + 1)) + 3;
 
 let hue = 210;
 let lightness = 78;
@@ -55,12 +64,46 @@ function Banner() {
         backgroundColor: `hsl(${hue}, 78%, ${lightness}%)`,
         transition: 'background-color 1s linear',}}
         >
+      {Array.from({ length: cloudAmount }).map((_, i) => (
+        <Cloud key={i} />
+      ))}
       <Miel />
-      <Tree />
+      {Array.from({ length: treeAmount }).map((_, i) => (
+        <Tree key={i} />
+      ))}
+            <AmsterdamHouseA />
+            <AmsterdamHouseB />
+            <AmsterdamHouseA />
+            <AmsterdamHouseC />
+            <AmsterdamHouseE />
+            <AmsterdamHouseD />
+            <AmsterdamHouseA />
+            <AmsterdamHouseB />
+            <AmsterdamHouseA />
+            <AmsterdamHouseC />
+            <AmsterdamHouseE />
+            <AmsterdamHouseD />
+            <AmsterdamHouseA />
+            <AmsterdamHouseB />
+            <AmsterdamHouseA />
+            <AmsterdamHouseC />
+            <AmsterdamHouseE />
+            <AmsterdamHouseA />
+            <AmsterdamHouseC />
+            <AmsterdamHouseE />
+            <AmsterdamHouseD />
+            <AmsterdamHouseA />
+            <AmsterdamHouseB />
+            <AmsterdamHouseA />
+            <AmsterdamHouseC />
+            <AmsterdamHouseE />
+            <AmsterdamHouseD />
+            <AmsterdamHouseA />
+            <AmsterdamHouseB />
+            <AmsterdamHouseA />
       <BenchA />
       <Ground />
       <Sun />
-      <HouseABoekel />
     </div>
 
 

@@ -1,12 +1,401 @@
-#banner-portfolio {
-  display: inline-block;
-  width: 100%;
-  height: 80vh;
-  background: var(--accent-color-2-light);
-  overflow: hidden;
-  margin: 0;
+#ground {
+    display: inline-block;
+    height: 20vh;
+    width: 100vw;
+    background-color: var(--color-ground);
+    border: var(--border-black);
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
 }
 
-#ground {
-  background-color: var(--ground-color);
+#textballoon {
+  position: absolute;
+  left: 40%;
+  font-size: 32px;
+  z-index: 5;
+
+    p:nth-of-type(1) {
+      position: absolute;
+      width: 400px;
+      z-index: 3;
+      margin-left: 20px;
+    }
+
+    p:nth-of-type(2) {
+      position: absolute;
+      z-index: 3;
+      margin-left: 20px;
+      top: 50px;
+      width: 400px;
+  }
 }
+
+#textballoon-shape {
+  position: absolute;
+  width: 500px;
+}
+
+
+.textballoon-1 {
+  fill: #fff;
+  stroke: #000;
+  stroke-miterlimit: 10;
+}
+
+
+#benchA {
+    width: 100px;
+    position: absolute;
+    bottom: 20vh;
+    left: 20em;
+}
+
+.cls-1 {
+        fill: #9b4635;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #b25c47;
+      }
+
+      .cls-3 {
+        fill: #4f2921;
+      }
+
+      .houseA-1 {
+        fill: #4c413d;
+      }
+
+      .houseA-1, .houseA-2 {
+        stroke: #000;
+      }
+
+      .houseA-1, .houseA-2, .houseA-3 {
+        stroke-miterlimit: 10;
+      }
+
+      .houseA-2 {
+        fill: #353535;
+      }
+
+      .houseA-3 {
+        fill: #7ba1af;
+        stroke: #e6e6e6;
+        stroke-width: 3px;
+      }
+
+      #houseA {
+        position: absolute;
+        width: 200px;
+        top: 60vh;
+        left: 2em;
+      }
+
+      #miel {
+        position: absolute;
+        z-index: 3;
+        left: 60%;
+        top: 50%;
+        width: 500px;
+        clip-path: inset(0 0 55% 0);
+
+     @media (max-width:720px) {
+    margin-left: -6em;
+  }
+      }
+
+      .miel-1 { stroke-width: .25px; }
+
+.miel-1, .miel-2, .miel-3, .miel-4, .miel-5, .miel-6, .miel-7, .miel-8, .miel-9,
+.miel-10, .miel-11, .miel-12, .miel-13, .miel-14, .miel-15, .miel-16, .miel-17 {
+        stroke-miterlimit: 10;
+}
+
+.miel-1, .miel-2, .miel-3, .miel-4, .miel-5, .miel-6, .miel-7, .miel-8,
+.miel-10, .miel-11, .miel-12, .miel-13, .miel-14, .miel-15, .miel-16 {
+        stroke: #000;
+      }
+
+      .miel-2 { fill: #828237; }
+      .miel-18 { fill: #abbaaf; }
+      .miel-19 { fill: #565e5d; }
+      .miel-3 { fill: #091928; }
+      .miel-20 { fill: #6b6b34; }
+      .miel-4 { stroke-width: 1.035px; }
+      .miel-4, .miel-5, .miel-6, .miel-9 { fill: #cea48d; }
+      .miel-5 { stroke-width: .975px; }
+      .miel-6 { stroke-width: 1.021px; }
+      .miel-7 { fill: #c9c9c9; }
+      .miel-8 { fill: #121a24; }
+      .miel-9 { stroke: #a67c52; }
+      .miel-10 { fill: #1a1a1a; }
+      .miel-11 { fill: #4f3c1d; stroke-width: .5px; }
+      .miel-12 { fill: #070b0f; }
+      .miel-13, .miel-15 { stroke-width: .75px; }
+      .miel-13, .miel-17 { fill: none; }
+      .miel-14 { fill: #f7f7f7; stroke-width: .479px; }
+      .miel-21 { fill: #4ca0ff; }
+      .miel-15 { fill: #e6e6e6; }
+      .miel-16 { fill: #112243; }
+      .miel-17 { stroke: #6b6b34; stroke-width: 4px; }
+
+      #sun {
+    animation: turning 35s linear infinite;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: 0;
+}
+
+#banner-portfolio {
+  z-index: 3;
+}
+
+#tree {
+    width: 50px;
+    z-index: 2;
+}
+
+#cloud {
+    stroke: #000;
+    stroke-miterlimit: 10;
+    z-index: 1;
+
+    &:hover {
+        scale: 1.5;
+        animation-duration: 0.2s;
+    }
+}
+
+#amsterdamHouseA, #amsterdamHouseB, #amsterdamHouseC, #amsterdamHouseD, #amsterdamHouseE {
+  width: 50px;
+  position: relative;
+  top: 41vh;
+  z-index: 1;
+}
+
+      .amsterdamHouseA-1 {
+        fill: #c4c4c4;
+      }
+
+      .amsterdamHouseA-1, .amsterdamHouseA-2, .amsterdamHouseA-3, .amsterdamHouseA-4, .amsterdamHouseA-5, .amsterdamHouseA-6 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .amsterdamHouseA-2 {
+        fill: #342f33;
+      }
+
+      .amsterdamHouseA-7, .amsterdamHouseA-6 {
+        fill: #bea383;
+      }
+
+      .amsterdamHouseA-3 {
+        fill: #24303c;
+      }
+
+      .amsterdamHouseA-4 {
+        fill: #131d23;
+      }
+
+      .amsterdamHouseA-5 {
+        fill: #82add8;
+      }
+
+        .amsterdamHouseB-1,
+          .amsterdamHouseB-2,
+          .amsterdamHouseB-3,
+          .amsterdamHouseB-4,
+          .amsterdamHouseB-5,
+          .amsterdamHouseB-6,
+          .amsterdamHouseB-7,
+          .amsterdamHouseB-8,
+          .amsterdamHouseB-9,
+          .amsterdamHouseB-10,
+          .amsterdamHouseB-11,
+          .amsterdamHouseB-12,
+          .amsterdamHouseB-13 {
+            stroke: #000;
+            stroke-miterlimit: 10;
+          }
+
+          .amsterdamHouseB-1,
+          .amsterdamHouseB-7 {
+            stroke-width: 1.051px;
+          }
+
+          .amsterdamHouseB-1,
+          .amsterdamHouseB-12 {
+            fill: #584849;
+          }
+
+          .amsterdamHouseB-2,
+          .amsterdamHouseB-3,
+          .amsterdamHouseB-11 {
+            fill: #131d23;
+          }
+
+          .amsterdamHouseB-2,
+          .amsterdamHouseB-8 {
+            stroke-width: .499px;
+          }
+
+          .amsterdamHouseB-3 {
+            stroke-width: .567px;
+          }
+
+          .amsterdamHouseB-4 {
+            stroke-width: .97px;
+          }
+
+          .amsterdamHouseB-4,
+          .amsterdamHouseB-5,
+          .amsterdamHouseB-6 {
+            fill: #82add8;
+          }
+
+          .amsterdamHouseB-5 {
+            stroke-width: .99px;
+          }
+
+          .amsterdamHouseB-6 {
+            stroke-width: .9px;
+          }
+
+          .amsterdamHouseB-7 {
+            fill: #c1c1c1;
+          }
+
+          .amsterdamHouseB-8 {
+            fill: #bfbfbf;
+          }
+
+          .amsterdamHouseB-9 {
+            stroke-width: .765px;
+          }
+
+          .amsterdamHouseB-9,
+          .amsterdamHouseB-10,
+          .amsterdamHouseB-13 {
+            fill: #bea383;
+          }
+
+          .amsterdamHouseB-10 {
+            stroke-width: .842px;
+          }
+
+          .amsterdamHouseB-12 {
+            stroke-width: 1.006px;
+          }
+
+        .amsterdamHouseC-1 {
+        fill: #ccb59b;
+      }
+
+      .amsterdamHouseC-1, .amsterdamHouseC-2, .amsterdamHouseC-3, .amsterdamHouseC-4, .amsterdamHouseC-5, .amsterdamHouseC-6, .amsterdamHouseC-7 {
+        stroke-miterlimit: 10;
+      }
+
+      .amsterdamHouseC-1, .amsterdamHouseC-2, .amsterdamHouseC-5, .amsterdamHouseC-6, .amsterdamHouseC-7 {
+        stroke: #000;
+      }
+
+      .amsterdamHouseC-2 {
+        fill: #5e5553;
+      }
+
+      .amsterdamHouseC-3 {
+        fill: #6d3d40;
+        stroke: #aa9d3c;
+      }
+
+      .amsterdamHouseC-4 {
+        fill: #82add8;
+        stroke: #fff;
+        stroke-width: .97px;
+      }
+
+      .amsterdamHouseC-5 {
+        fill: #708187;
+      }
+
+      .amsterdamHouseC-6 {
+        fill: #152025;
+      }
+
+      .amsterdamHouseC-7 {
+        fill: #aa9d3c;
+      }
+
+          .amsterdamHouseD-1 {
+        fill: #0d1a1a;
+      }
+
+      .amsterdamHouseD-1, .amsterdamHouseD-2, .amsterdamHouseD-3, .amsterdamHouseD-4 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .amsterdamHouseD-2 {
+        fill: #82add8;
+        stroke-width: .97px;
+      }
+
+      .amsterdamHouseD-3 {
+        fill: #222a33;
+      }
+
+      .amsterdamHouseD-4 {
+        fill: #fff;
+      }
+
+       .amsterdamHouseE-1 {
+        fill: #7b8791;
+        stroke: #1a1a1a;
+      }
+
+      .amsterdamHouseE-1, .amsterdamHouseE-2, .amsterdamHouseE-3, .amsterdamHouseE-4, .amsterdamHouseE-5, .amsterdamHouseE-6, .amsterdamHouseE-7, .amsterdamHouseE-8 {
+        stroke-miterlimit: 10;
+      }
+
+      .amsterdamHouseE-2 {
+        stroke-width: .97px;
+      }
+
+      .amsterdamHouseE-2, .amsterdamHouseE-3, .amsterdamHouseE-5, .amsterdamHouseE-6, .amsterdamHouseE-7, .amsterdamHouseE-8 {
+        stroke: #000;
+      }
+
+      .amsterdamHouseE-2, .amsterdamHouseE-6 {
+        fill: #82add8;
+      }
+
+      .amsterdamHouseE-3 {
+        fill: #444;
+      }
+
+      .amsterdamHouseE-4 {
+        fill: #0d1a1a;
+        stroke: #fff;
+      }
+
+      .amsterdamHouseE-5 {
+        fill: #c6c6c6;
+      }
+
+      .amsterdamHouseE-7 {
+        fill: #c7c1be;
+      }
+
+      .amsterdamHouseE-8 {
+        fill: #594845;
+      }

@@ -1,25 +1,33 @@
-import './Header.css';
+import { Link } from 'react-router-dom';
 import Logo from '../assets/logo/Logo';
 
 function Header() {
   return (
     <header className="main-header">
       <div class="logo-header">
-        <Logo width={64} height={64} />
+        <Link to="/"><Logo width={64} height={64} /></Link>
       </div>
       <div className="navigation">
         <div class="button">
-        <a href="/">Home</a>
+        <Link to="/about">About</Link>
         </div>
+
         <div class="button">
-        <a href="/portfolio">Portfolio</a>
+        <Link to="/projects">Projects</Link>
         </div>
+
+        {/* <div class="button">
+        <Link to="/library">Library</Link>
+        </div>*/}
+
         <div class="button">
-        <a href="/about">About</a>
-        </div>
+        <Link to="/blog">Blogs</Link>
+        </div> 
+        
         <div class="button">
-        <a href="/contact">Contact</a>
+        <Link to="/contact">Contact</Link>
         </div>
+
       </div>
     </header>
   );

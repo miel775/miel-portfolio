@@ -1,0 +1,44 @@
+     #amsterdamCarMini {
+        width: 150px;
+
+        @media (max-width:720px) {
+          width: 75px;
+        }
+     }
+     
+     .amsterdamMiniCar-1 {
+        fill: #635761;
+      }
+
+      .amsterdamMiniCar-1, .amsterdamMiniCar-2, .amsterdamMiniCar-3, .amsterdamMiniCar-4, .amsterdamMiniCar-5, .amsterdamMiniCar-6, .amsterdamMiniCar-7, .amsterdamMiniCar-8 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .amsterdamMiniCar-2 {
+        fill: #d3d3db;
+      }
+
+      .amsterdamMiniCar-3 {
+        fill: #eadfe3;
+      }
+
+      .amsterdamMiniCar-4 {
+        fill: #b7101c;
+      }
+
+      .amsterdamMiniCar-5 {
+        fill: #b7b7b7;
+      }
+
+      .amsterdamMiniCar-6 {
+        fill: #d5012a;
+      }
+
+      .amsterdamMiniCar-7 {
+        fill: #235298;
+      }
+
+      .amsterdamMiniCar-8 {
+        fill: #161616;
+      }

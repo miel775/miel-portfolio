@@ -1,0 +1,36 @@
+    #regularCow {
+        width: 150px;
+
+      @media (max-width:720px) {
+          width: 75px;
+        }
+     }
+      
+      .regularCow-1 {
+        fill: #3f3f3f;
+      }
+
+      .regularCow-1, .regularCow-2, .regularCow-3, .regularCow-4, .regularCow-5, .regularCow-6 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .regularCow-2 {
+        fill: #fff;
+      }
+
+      .regularCow-3 {
+        fill: #3a3a3a;
+      }
+
+      .regularCow-4 {
+        fill: #c1a18c;
+      }
+
+      .regularCow-5 {
+        fill: #424242;
+      }
+
+      .regularCow-6 {
+        fill: #161616;
+      }

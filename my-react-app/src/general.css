@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light dark;
+
   /* darker-colors */
   --l-dark: 0%;
   --l-dark-8: 8%;
@@ -20,7 +22,7 @@
 
   --primary-color-darker: hsl(233,var(--saturation-general), var(--l-dark-8));
   --primary-color-dark: hsl(233,var(--saturation-general), var(--l-dark-13));
-  --primary-color: hsl(233,var(--saturation-general), var(--l-dark-18));
+  --primary-color: light-dark(hsl(233,var(--saturation-general), var(--l-dark-18)), hsl(233,var(--saturation-general),var(--l-light-78)));
   --primary-color-light: hsl(233,var(--saturation-general), 23%);
   --primary-color-lighter: hsl(233,var(--saturation-general), 28%);
 
@@ -44,8 +46,8 @@
     --neutral-color-dark: hsl(0,var(--saturation-none),13%);
 
   /* border */
-  --border-white: white 1px solid;
-  --border-black: black 1px solid;
+  --border-white: light-dark(white, black) 1px solid;
+  --border-black: light-dark(black, white) 1px solid;
 
   /* transition */
   --transition: 0.3s;
@@ -56,7 +58,6 @@
   --color-ground: hsl(96, 78%, 18%);
 }
 
-
 body {
   margin: 0;
   background-color: var(--accent-color);
@@ -64,16 +65,22 @@ body {
 
 h1 {
   font-family: "Garet Heavy";
-  font-size: clamp(84px, 100%, 36px);
+  font-size: clamp(2.75rem, 0.75rem + 6vw, 5.25rem);
 }
 
 h2 {
-  font-family: "Garet Book";
-  font-size: clamp(64px, 100%, 36px);
+  font-family: "Jersey-20";
+  font-size: clamp(2.25rem, 1.375rem + 3.5vw, 4rem);
+}
+
+h3 {
+  font-family: "Jersey-20";
+  font-size: clamp(2.25rem, 1.375rem + 3.5vw, 4rem);
 }
 
 p {
     font-family: "Jersey-20";
+  font-size: clamp(1rem, 0.75rem + 1vw, 1.5rem);
 }
 
 a {
@@ -81,11 +88,47 @@ a {
   text-decoration: none;
 }
 
+main {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#banner {
+  height: 80vh;
+  width: 100vw;
+  display: inline-block;
+}
+
+#banner-portfolio {
+  display: inline-block;
+  width: 100%;
+  margin-top: 60px;
+  height: 88vh;
+  background: var(--accent-color-2-light);
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+   clip-path: rect(10px, 20px, 30px, 40px);
+
+     @media (max-width:720px) {
+    margin-left: -4em;
+    width: 110vw;
+  }
+}
+
+#paragaph-about {
+  font-size: 32px;
+}
+
+#ground {
+  background-color: var(--ground-color);
+}
+
 .button {
   color: white;
   background-color: var(--primary-color-lighter);
   height: 2em;
-  width: 6em;
+  width: 8em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,23 +156,225 @@ a {
   }
 }
 
+/* header */
+.main-header {
+  display: flex;
+  position: sticky;
+  gap: 20px;
+  padding: 16px;
+  background: var(--primary-color);
+  border: var(--border-white);
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  z-index: 4;
+
+  @media (max-width:720px) {
+    justify-content: center;
+    .navigation {
+      display: none;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  gap: 1em;
+  margin-right: 2em;
+}
+
+#sections {
+  margin-top: 120px;
+}
+
+.logo-header {
+  overflow: visible;
+  height: fit-content;
+}
+
+#project-overview-section {
+  display: flex;
+  gap: 1em;
+}
+
+#box-one:hover ~ img{
+     width: 500px;
+     height: 500px;
+     object-fit: cover;
+}
+
+#box-two:hover ~ #text-field-two {
+  display: block;
+}
+
+#box-three:hover ~ #text-field-three {
+  display: block;
+}
+
+#box-four:hover ~ #text-field-four {
+  display: block;
+}
+
+
+#project-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+
+  img {
+     height: 200px;
+     width: 200px;
+     object-fit: cover;
+     border: var(--border-black);
+  }
+}
+
+/* footer */
+footer {
+  color: var(--neutral-color-lighter);
+  background-color: var(--primary-color);
+  height: 50vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: var(--border-white);
+}
+
+#footerPartOne {
+  display: flex;
+  justify-content: center;
+}
+
+#footerPartTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+  gap: 2em;
+  flex-direction: column;
+
+  p {
+    margin-top: -0.3em;
+    text-decoration: none;
+    color: var(--neutral-color-lighter);
+
+  }
+
+  img {
+    margin-left: 0.5em;
+  }
+
+  a p {
+    display: none;
+  }
+
+  img:hover {
+    filter:drop-shadow(16px 16px 20px var(--color-neutral-light));
+    transition-duration: 0.3s; 
+    scale: 1.4;
+  }
+
+  .button {
+    width: 15em;
+    height: 3em;
+  }
+}
+
+#footerPartThree {
+  display: flex;
+  justify-content: center;
+}
+
+#footer-backToTop {
+  position: relative;
+  left:2em;
+  bottom: 2em;
+  width: 10em;
+
+  p {
+    font-size: 10px;
+  }
+}
+
+#footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+#footer-name {
+  font-size: 32px;
+  line-height: 0.1;
+  margin-top: 1.5em;
+}
+
+#navigation-links {
+  display: flex;
+  flex-direction: row;
+}
+
+#about-section {
+  display: flex;
+  gap: 2em;
+
+  p {
+    padding: 2em;
+    font-size: 24px;
+  }
+
+  @media (max-width:720px) {
+    flex-direction: column;
+  }
+}
+
+#section-picture {
+    height: 50%;
+    width: 50%;
+    display: flex;
+
+  @media (max-width:720px) {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+#minibanner {
+  height: 20vh;
+  width: 100%;
+  display: inline-block;
+  background-color: var(--neutral-color-lighter);
+  border: var(--border-white);
+  display: flex;
+  align-content: baseline;
+  justify-content: center;
+
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+
+
 @font-face {
  font-family: "Jersey-20";
  src: local("Jersey20"),
-  url("./fonts/Jersey20-Regular.ttf") format("truetype");
+  url("./src/assets/fonts/Jersey20-Regular.ttf") format("truetype");
  font-weight: bold;
 }
 
 @font-face {
  font-family: "Garet Book";
  src: local("Garet"),
-  url("./fonts/Garet-Book.ttf") format("truetype");
+  url("./src/assets/fonts/Garet-Book.ttf") format("truetype");
  font-weight: bold;
 }
 
 @font-face {
  font-family: "Garet Heavy";
  src: local("Garet"),
-  url("./fonts/Garet-Heavy.ttf") format("truetype");
+  url("./src/assets/fonts/Garet-Heavy.ttf") format("truetype");
  font-weight: bold;
 }

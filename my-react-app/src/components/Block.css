@@ -1,0 +1,6 @@
+#block {
+    height: 250px;
+    width: 250px;
+    stroke: 1px solid var(--color-neutral-dark);
+    background-color: var(--neutral-color-light);
+}

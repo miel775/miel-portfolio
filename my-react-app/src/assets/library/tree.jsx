@@ -1,8 +1,18 @@
 import './animationLibrary.css';
+import { useMemo } from 'react';
+
+function rand(min, max) {
+  return Math.random() * (max - min) + min;
+}
 
 function Tree() {
   const tree2Color = Math.random() < 0.5 ? '#9D6322' : '#50371B';
   const tree1Color = Math.random() < 0.5 ? '#6F742E' : '#42451C';
+  const tree = useMemo(() => ({
+    top: rand(72, 80),
+    left: rand(0, 100),
+    scale: rand(0.5, 1.4),
+  }), []);
 
   return (
     <svg
@@ -10,6 +20,12 @@ function Tree() {
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 109 158.5"
+      style={{
+          position: 'absolute',
+          top: `${tree.top}%`,
+          left: `${tree.left}%`,
+          scale: "1",
+        }}
     >
       <path
         className="tree-1"

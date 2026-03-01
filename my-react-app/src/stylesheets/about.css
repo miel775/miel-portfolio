@@ -1,0 +1,5 @@
+#mini-sections {
+    display: flex;
+    background-color: black;
+    gap: 1em;
+}

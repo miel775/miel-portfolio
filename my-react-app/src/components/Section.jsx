@@ -1,9 +1,24 @@
 import './Section.css'; 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-function Section({ title, icon, children }) {
+gsap.registerPlugin(ScrollTrigger);
+
+// gsap.from('#wrapper', {
+//   scrollTrigger: {
+//     trigger: "#wrapper",
+//     start: "150% 40%",
+//     end: "170% 50%",
+//     markers: true,
+//     toggleActions: "restart pause revert pause"
+// },
+// 	y: 500,
+// });
+
+function Section({ title, icon, children, id }) {
   return (
     <div id="wrapper">
-    <section class="main-section">
+    <section class="main-section" id={id}>
         <div class="tab-title-section"> 
             <div class="tab-title">
           {icon && <img src={icon} alt={`${title} icon`} />}
