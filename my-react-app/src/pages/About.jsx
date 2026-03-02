@@ -1,7 +1,7 @@
 import MiniBanner from '../components/MiniBanner';
 import Section from '../components/Section';
 
-import MiniSection from '../components/MiniSection';
+import MiniSection from '../components/miniSection';
 import '../stylesheets/about.css';
 
 
