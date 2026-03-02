@@ -1,5 +1,5 @@
 import '../general.css';
-import Logo from '../assets/logo/Logo';
+import Logo from '../assets/logo/logo';
 import RegularCow from '../assets/library/animals/regularCow'
 import AmsterdamCarMini from '../assets/library/amsterdam/amsterdamCarMini'
 
