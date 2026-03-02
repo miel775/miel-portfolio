@@ -1,6 +1,5 @@
 import MiniBanner from '../components/MiniBanner';
 import Section from '../components/Section';
-import aboutIcon from '../assets/icons/aboutIcon.png';
 
 import MiniSection from '../components/MiniSection';
 import '../stylesheets/about.css';
