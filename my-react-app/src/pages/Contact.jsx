@@ -12,7 +12,7 @@ function Contact() {
         <div id="contact">
         <BottlePost />
 
-        <form action="submit.php" method="POST">
+        <form action="submit.php" method="POST" id="contact-form">
           <label for="name">Naam:</label>
           <input type="text" id="name" name="name" required/>
 
@@ -22,7 +22,9 @@ function Contact() {
           <label for="message">Bericht:</label>
           <textarea id="message" name="message" rows="4" required></textarea>
 
-          <button class="button" type="submit">Verstuur</button>
+          <div id="contact-form-button-area">
+            <button id="contact-form-button" class="button" type="submit">Verstuur</button>
+          </div>
         </form>
 
         </div>

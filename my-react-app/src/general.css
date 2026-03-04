@@ -91,6 +91,11 @@ a {
 main {
   margin-left: 10%;
   margin-right: 10%;
+
+  @media (max-width:720px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 #banner {
@@ -220,6 +225,7 @@ main {
 #project-boxes {
   display: flex;
   justify-content: center;
+  max-width: 100%;
   gap: 1em;
 
   img {

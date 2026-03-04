@@ -4,7 +4,10 @@
   justify-content: center;
   padding: 2em;
   flex-direction: row;
-  height: 30em;
+  height: 38em;
+@media (max-width:720px) {
+    height: 50em;
+}
 }
 
 #contact {
@@ -13,6 +16,11 @@
     grid-template-columns: 30% 70%;
     padding: 4em;
 
+    @media (max-width:1080px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 form input {
@@ -28,6 +36,19 @@ label {
     font-size: 2em;
     font-family: "Jersey-20";
     color: var(--neutral-color-light);
+}
+
+#contact-form-button {
+    height: 3em;
+    width: 16em;
+    display: flex;
+    margin-top: 1em;
+    font-family: "Jersey-20";
+}
+
+#contact-form-button-area {
+    display: flex;
+    justify-content: center;
 }
 
 #message {

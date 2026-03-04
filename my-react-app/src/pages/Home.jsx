@@ -20,7 +20,7 @@ function Home() {
                   alt="About"
                 />
                 <p id="paragaph-about">
-                  Hi, I'm Miel van Sleeuwen!I'm 24 years old and proudly from the Netherlands.
+                  Hi, I'm Miel van Sleeuwen!I'm 25 years old and proudly from the Netherlands.
                   <br/>
                   <br/>
                   Welcome to my portfolio I invite you to take a closer look into my world. My guiding mantra is “never stop exploring.”
