@@ -1,113 +1,77 @@
+:root {
+  --sky-lightest: hsla(210, 100%, 78%, 1);
+  --sky-darkest: hsla(236, 100%, 18%, 1);
+
+  --sun: hsla(49, 78%, 58%, 1);
+  --moon: hsla(0, 0%, 89%, 1);
+
+  --ground: hsla(96, 78%, 18%);
+
+  --leaves-light: hsla(96, 78%, 33%, 1);
+  --leaves-dark: hsla(96, 78%, 13%, 1);
+
+  --wood: hsla(32, 78%, 28%, 1);
+
+  --windows-color:  hsla(233, 78%, 90%, 1);
+  --windows-color-night:  rgb(250, 250, 130);
+  --border-black: solid black 1px;
+}
+
 #ground {
     display: inline-block;
     height: 20vh;
     width: 100vw;
-    background-color: var(--color-ground);
+    background-color: var(--ground);
     border: var(--border-black);
     bottom: 0;
     left: 0;
+    z-index: 1;
     position: absolute;
     overflow: hidden;
 }
 
-#benchA {
-    width: 100px;
+svg rect, path, circle, ellipse, line, polyline,polygon {
+      stroke: black;
+      stroke-width: 1px;
+      stroke-miterlimit: 10;
+}
+
+#logo-header-path {
+  stroke: white;
+  stroke-width: 10px;
+}
+
+#miel {
     position: absolute;
-    bottom: 20vh;
-    left: 20em;
+    z-index: 3;
+    left: 60%;
+    top: 50%;
+    width: 500px;
+    clip-path: inset(0 0 55% 0);
 }
 
-.cls-1 {
-        fill: #9b4635;
-      }
-
-      .cls-1, .cls-2, .cls-3 {
-        stroke: #000;
-        stroke-miterlimit: 10;
-      }
-
-      .cls-2 {
-        fill: #b25c47;
-      }
-
-      .cls-3 {
-        fill: #4f2921;
-      }
-
-      .houseA-1 {
-        fill: #4c413d;
-      }
-
-      .houseA-1, .houseA-2 {
-        stroke: #000;
-      }
-
-      .houseA-1, .houseA-2, .houseA-3 {
-        stroke-miterlimit: 10;
-      }
-
-      .houseA-2 {
-        fill: #353535;
-      }
-
-      .houseA-3 {
-        fill: #7ba1af;
-        stroke: #e6e6e6;
-        stroke-width: 3px;
-      }
-
-      #houseA {
-        position: absolute;
-        width: 200px;
-        top: 60vh;
-        left: 2em;
-      }
-
-      #miel {
-        position: absolute;
-        z-index: 3;
-        left: 60%;
-        top: 50%;
-        width: 500px;
-        clip-path: inset(0 0 55% 0);
-      }
-
-      .miel-1 { stroke-width: .25px; }
-
-.miel-1, .miel-2, .miel-3, .miel-4, .miel-5, .miel-6, .miel-7, .miel-8, .miel-9,
-.miel-10, .miel-11, .miel-12, .miel-13, .miel-14, .miel-15, .miel-16, .miel-17 {
-        stroke-miterlimit: 10;
+.miel-2 {
+  fill: #828237; 
 }
+.miel-18 { fill: #abbaaf; }
+.miel-19 { fill: #565e5d; }
+.miel-3 { fill: #091928; }
+.miel-20 { fill: #6b6b34; }
+.miel-4, .miel-5, .miel-6, .miel-9 { fill: #cea48d; }
+.miel-7 { fill: #c9c9c9; }
+.miel-8 { fill: #121a24; }
+.miel-9 { stroke: #a67c52;  }
+.miel-10 { fill: #1a1a1a; }
+.miel-11 { fill: #4f3c1d; }
+.miel-12 { fill: #070b0f; }
+.miel-13, .miel-17 { fill: none; }
+.miel-14 { fill: #f7f7f7;}
+.miel-21 { fill: #4ca0ff; }
+.miel-15 { fill: #e6e6e6; }
+.miel-16 { fill: #112243; }
+.miel-17 { stroke: #6b6b34;  stroke-width: 4px;}
 
-.miel-1, .miel-2, .miel-3, .miel-4, .miel-5, .miel-6, .miel-7, .miel-8,
-.miel-10, .miel-11, .miel-12, .miel-13, .miel-14, .miel-15, .miel-16 {
-        stroke: #000;
-      }
-
-      .miel-2 { fill: #828237; }
-      .miel-18 { fill: #abbaaf; }
-      .miel-19 { fill: #565e5d; }
-      .miel-3 { fill: #091928; }
-      .miel-20 { fill: #6b6b34; }
-      .miel-4 { stroke-width: 1.035px; }
-      .miel-4, .miel-5, .miel-6, .miel-9 { fill: #cea48d; }
-      .miel-5 { stroke-width: .975px; }
-      .miel-6 { stroke-width: 1.021px; }
-      .miel-7 { fill: #c9c9c9; }
-      .miel-8 { fill: #121a24; }
-      .miel-9 { stroke: #a67c52; }
-      .miel-10 { fill: #1a1a1a; }
-      .miel-11 { fill: #4f3c1d; stroke-width: .5px; }
-      .miel-12 { fill: #070b0f; }
-      .miel-13, .miel-15 { stroke-width: .75px; }
-      .miel-13, .miel-17 { fill: none; }
-      .miel-14 { fill: #f7f7f7; stroke-width: .479px; }
-      .miel-21 { fill: #4ca0ff; }
-      .miel-15 { fill: #e6e6e6; }
-      .miel-16 { fill: #112243; }
-      .miel-17 { stroke: #6b6b34; stroke-width: 4px; }
-
-      #sun {
+#sun {
     animation: turning 35s linear infinite;
     position: absolute;
     left: 0%;
@@ -117,17 +81,12 @@
     height: 75px;
 }
 
-#banner-portfolio {
-  z-index: 3;
-}
-
 #tree {
     width: 50px;
     z-index: 2;
 }
 
 #cloud {
-    stroke: #000;
     stroke-miterlimit: 10;
     z-index: 1;
     position: absolute;
@@ -142,13 +101,9 @@
               fill: #775a25;
             }
 
-            .bottlePost-1, .bottlePost-2, .bottlePost-3, .bottlePost-4 {
-              stroke: #000;
-              stroke-miterlimit: 10;
-            }
 
             .bottlePost-1, .bottlePost-3, .bottlePost-4 {
-              stroke-width: 4px;
+              stroke-width: 1px;
             }
 
             .bottlePost-2 {
@@ -172,3 +127,266 @@
             #bottlePost {
               width: 150px;
             }
+
+
+
+/* miel-404 */
+#miel-404 {
+  height: 250px;
+}
+
+.miel-404-animation-1 {
+        fill: #f7df4d;
+      }
+
+
+      .miel-404-animation-3 {
+        fill: #828237;
+
+      }
+
+      .miel-404-animation-4 {
+        fill: #c1a82d;
+      }
+
+      .miel-404-animation-5 {
+        fill: #ad826c;
+      }
+
+      .miel-404-animation-6 {
+        fill: #091928;
+      }
+
+      .miel-404-animation-19 {
+        fill: #6b6b34;
+      }
+
+      .miel-404-animation-7, .miel-404-animation-8, .miel-404-animation-9, .miel-404-animation-11 {
+        fill: #cea48d;
+      }
+
+
+      .miel-404-animation-10 {
+        fill: #f5ea6c;
+      }
+
+      .miel-404-animation-11 {
+        stroke: #a67c52;
+        
+      }
+
+      .miel-404-animation-12 {
+        fill: #e2e2e2;
+      }
+
+      .miel-404-animation-13 {
+        fill: #1a1a1a;
+      }
+
+      .miel-404-animation-14 {
+        fill: #4f3c1d;
+      }
+
+
+      .miel-404-animation-15, .miel-404-animation-18 {
+        fill: none;
+      }
+
+      .miel-404-animation-16 {
+        fill: #f7f7f7;
+      }
+
+      .miel-404-animation-17 {
+        fill: #e6e6e6;
+      }
+
+      .miel-404-animation-18 {
+        stroke: #6b6b34;
+        stroke-width: 4px;
+      }
+
+.miel-404-animation-5a,
+.miel-404-animation-5b,
+.miel-404-animation-5a1,
+.miel-404-animation-5b1 {
+  fill: #ad826c;
+}
+
+.miel-404-animation-7b1,
+.miel-404-animation-7b {
+  fill: #cea48d;
+  stroke-width: 1px;
+}
+
+
+
+#amsterdamHouseA, #amsterdamHouseB, #amsterdamHouseC, #amsterdamHouseD, #amsterdamHouseE {
+  width: 50px;
+  position: relative;
+  top: 41vh;
+  z-index: 1;
+}
+
+.amsterdamHouse-windows {
+  fill: var(--windows-color);
+
+  &:hover {
+    fill: var(--windows-color-night);
+  }
+}
+
+.amsterdamHouseA-1 {
+  fill: #c4c4c4;
+}
+
+      .amsterdamHouseA-1, .amsterdamHouseA-2, .amsterdamHouseA-3, .amsterdamHouseA-4, .amsterdamHouseA-5, .amsterdamHouseA-6 {
+        stroke: var(--border-black);
+        stroke-miterlimit: 10;
+      }
+
+      .amsterdamHouseA-2 {
+        fill: #342f33;
+      }
+
+      .amsterdamHouseA-7, .amsterdamHouseA-6 {
+        fill: #bea383;
+      }
+
+      .amsterdamHouseA-3 {
+        fill: #24303c;
+      }
+
+      .amsterdamHouseA-4 {
+        fill: #131d23;
+      }
+
+      .amsterdamHouseA-5 {
+        fill: var(--windows-color);
+
+        &:hover {
+          fill: var(--windows-color-night);
+        }
+      }
+
+
+
+          .amsterdamHouseB-1,
+          .amsterdamHouseB-7 {
+            stroke-width: 1.051px;
+          }
+
+          .amsterdamHouseB-1,
+          .amsterdamHouseB-12 {
+            fill: #584849;
+          }
+
+          .amsterdamHouseB-2,
+          .amsterdamHouseB-3,
+          .amsterdamHouseB-11 {
+            fill: #131d23;
+          }
+
+          .amsterdamHouseB-7 {
+            fill: #c1c1c1;
+          }
+
+          .amsterdamHouseB-8 {
+            fill: #bfbfbf;
+          }
+
+          .amsterdamHouseB-9 {
+            stroke-width: .765px;
+          }
+
+          .amsterdamHouseB-9,
+          .amsterdamHouseB-10,
+          .amsterdamHouseB-13 {
+            fill: #bea383;
+          }
+
+          .amsterdamHouseB-10 {
+            stroke-width: .842px;
+          }
+
+          .amsterdamHouseB-12 {
+            stroke-width: 1.006px;
+          }
+
+        .amsterdamHouseC-1 {
+        fill: #ccb59b;
+      }
+
+      .amsterdamHouseC-1, .amsterdamHouseC-2, .amsterdamHouseC-3, .amsterdamHouseC-4, .amsterdamHouseC-5, .amsterdamHouseC-6, .amsterdamHouseC-7 {
+        stroke-miterlimit: 10;
+      }
+
+      .amsterdamHouseC-1, .amsterdamHouseC-2, .amsterdamHouseC-5, .amsterdamHouseC-6, .amsterdamHouseC-7 {
+        stroke: #000;
+      }
+
+      .amsterdamHouseC-2 {
+        fill: #5e5553;
+      }
+
+      .amsterdamHouseC-3 {
+        fill: #6d3d40;
+        stroke: #aa9d3c;
+      }
+
+      .amsterdamHouseC-4 {
+          fill: var(--windows-color);
+          stroke: #fff;
+
+        &:hover {
+          fill: var(--windows-color-night);
+        }
+      }
+
+      .amsterdamHouseC-5 {
+        fill: #708187;
+      }
+
+      .amsterdamHouseC-6 {
+        fill: #152025;
+      }
+
+      .amsterdamHouseC-7 {
+        fill: #aa9d3c;
+      }
+
+      .amsterdamHouseD-1 {
+        fill: #0d1a1a;
+      }
+
+      .amsterdamHouseD-3 {
+        fill: #222a33;
+      }
+
+      .amsterdamHouseD-4 {
+        fill: #fff;
+      }
+
+       .amsterdamHouseE-1 {
+        fill: #7b8791;
+      }
+
+      .amsterdamHouseE-3 {
+        fill: #444;
+      }
+
+      .amsterdamHouseE-4 {
+        fill: #0d1a1a;
+        stroke: #fff;
+      }
+
+      .amsterdamHouseE-5 {
+        fill: #c6c6c6;
+      }
+
+      .amsterdamHouseE-7 {
+        fill: #c7c1be;
+      }
+
+      .amsterdamHouseE-8 {
+        fill: #594845;
+      }

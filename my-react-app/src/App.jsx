@@ -1,5 +1,5 @@
-import './general.css'
-import './animation-keyframes.css'
+import './stylesheets/general.css'
+import './stylesheets/animation-keyframes.css'
 
 import Header from './components/Header'
 import Footer from './components/Footer'

@@ -1,11 +1,11 @@
 import MiniBanner from '/src/components/MiniBanner';
 import Section from '/src/components/Section';
 import '/src/stylesheets/library-overview.css';
-import AmsterdamHouseA from '/src/assets/library/amsterdamHouseA';
-import AmsterdamHouseB from '/src/assets/library/amsterdamHouseB';
-import AmsterdamHouseC from '/src/assets/library/amsterdamHouseC';
-import AmsterdamHouseD from '/src/assets/library/amsterdamHouseD';
-import AmsterdamHouseE from '/src/assets/library/amsterdamHouseE';
+import AmsterdamHouseA from '/src/assets/library/amsterdam/amsterdamHouseA';
+import AmsterdamHouseB from '/src/assets/library/amsterdam/amsterdamHouseB';
+import AmsterdamHouseC from '/src/assets/library/amsterdam/amsterdamHouseC';
+import AmsterdamHouseD from '/src/assets/library/amsterdam/amsterdamHouseD';
+import AmsterdamHouseE from '/src/assets/library/amsterdam/amsterdamHouseE';
 
 
 function LibraryOverview() {

@@ -10,6 +10,7 @@ function Logo({ className, width = 100, height = 100 }) {
       className={className}
     >
       <path
+        id="logo-header-path"
         d="M344.171,41l-94.031,94.229-93.677-94.229h-80.307v418h94.739v-52.075h158.844v52.075h94.739V41h-80.307ZM329.74,323.152h-158.844v-135.451l79.245,69.792,79.6-69.792v135.451Z"
         fill="#122284"
         stroke="#fff"

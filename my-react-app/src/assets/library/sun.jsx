@@ -1,5 +1,3 @@
-import './animationLibrary.css';
-
 function Sun() {
   const now = new Date();
   const time = now.getHours() + now.getMinutes() / 60;

@@ -14,6 +14,8 @@ import LibraryVideoDetail from '../pages/Library/video/LibraryVideoDetail'
 import BlogOverview from '../pages/Blog/BlogOverview'
 import BlogDetail from '../pages/Blog/BlogDetail'
 
+import NotFound from '../pages/404-page'
+
 function AppRoutes() {
   return (
     <Routes>
@@ -22,17 +24,20 @@ function AppRoutes() {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
 
-      <Route path="/projects" element={<ProjectsOverview />} />
-      <Route path="/project/:slug" element={<ProjectDetail />} />
+      <Route path="/projects" element={<NotFound />} />
+      <Route path="/project/:slug" element={<NotFound />} />
 
       {/* Library */}
-      <Route path="/library" element={<LibraryOverview />} />
-      <Route path="/library/svg/:slug" element={<LibrarySVGDetail />} />
-      <Route path="/library/video/:slug" element={<LibraryVideoDetail />} />
+      <Route path="/library" element={<NotFound />} />
+      <Route path="/library/svg/:slug" element={<NotFound />} />
+      <Route path="/library/video/:slug" element={<NotFound />} />
 
       {/* Portfolio */}
       <Route path="/blog" element={<BlogOverview />} />
       <Route path="/blog/:slug" element={<BlogDetail />} />
+
+      {/* 404page */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
 }

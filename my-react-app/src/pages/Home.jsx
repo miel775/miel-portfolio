@@ -1,10 +1,11 @@
-import '../general.css';
-import '../animation-keyframes.css';
+
 import Section from '../components/Section';
 import Banner from '../components/Banner';
 import aboutIcon from '../assets/icons/aboutIcon.png';
 import projects from '../assets/icons/projects.png';
 import videoOfMe from '../assets/icons/videoOfMe.png';
+
+
 
 function Home() {
   return (

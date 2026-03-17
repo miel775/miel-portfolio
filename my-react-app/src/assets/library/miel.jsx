@@ -1,5 +1,3 @@
-import './animationLibrary.css'
-
 function Miel() {
   return (
 <svg id="miel" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600">
@@ -66,5 +64,7 @@ function Miel() {
 </svg>
   );
 }
+
+// je kan hier de 404 miel ook neerzetten netzoals het seizoeneel maken van de webpagina dus bijvoorbeeld een kerstmuts wanneer het kerst is.
 
 export default Miel;

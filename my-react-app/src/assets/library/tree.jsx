@@ -1,4 +1,3 @@
-import './animationLibrary.css';
 import { useMemo } from 'react';
 
 function rand(min, max) {
