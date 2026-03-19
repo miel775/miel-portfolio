@@ -8,7 +8,7 @@ function About() {
       <MiniBanner title="About"/>
       <main>
         <div class="mini-sections">
-          <MiniSection title="year-2000" image="src/assets/pictures/year-2000.png">
+          <MiniSection title="year-2000" image="/src/assets/pictures/year-2000.png">
             <div id="mini-section-year-2000">
               <p>Born in a warm nest 'Arendnest' in Boekel the youngest of 4.
                 <br></br>
@@ -16,7 +16,7 @@ function About() {
             </div>
           </MiniSection>
 
-          <MiniSection title="year-2005" image="src/assets/pictures/year-2005.png" id="direction-change">
+          <MiniSection title="year-2005" image="/src/assets/pictures/year-2005.png" id="direction-change">
             <div id="mini-section-year-2005">
               <p>My favorite subject back in school was painting. Actually the first step to creativity.</p>
             </div>
@@ -29,13 +29,13 @@ function About() {
             </div>
           </MiniSection>
 
-          <MiniSection title="year-2009" image="src/assets/pictures/year-2009.svg" id="direction-change">
+          <MiniSection title="year-2009" image="/src/assets/pictures/year-2009.svg" id="direction-change">
             <div id="mini-section-year-2005">
               <p>My inspiration came particularly from Nintendo, remembering receiving this with cummunion. </p>
             </div>
           </MiniSection>
 
-          <MiniSection title="year-2012" image="src/assets/pictures/year-2012.png">
+          <MiniSection title="year-2012" image="/src/assets/pictures/year-2012.png">
             <div id="mini-section-year-2012">
               <p>When I had an obsession, I had it severly. Always was interested in weather, greography also liked to make vlogs with my 3DS.</p>
             </div>

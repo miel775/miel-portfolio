@@ -60,19 +60,19 @@ const [isVisible, setIsVisible] = useState(false);
     
     <div id="navigation-links">
       <a href="https://github.com/miel775">
-        <img src="./src/assets/icons/githubIcon.png" width="64" alt="github icon"></img>
+        <img src="/src/assets/icons/githubIcon.png" width="64" alt="github icon"></img>
         <p>Github</p>
       </a>
       <a href="https://www.youtube.com/@mhvs775">
-        <img src="./src/assets/icons/youTubeIcon.png" width="64" alt="Youtube icon"></img>
+        <img src="/src/assets/icons/youTubeIcon.png" width="64" alt="Youtube icon"></img>
         <p>Youtube</p>
       </a>
       <a href="https://www.linkedin.com/in/miel-van-sleeuwen-364766152/">
-        <img src="./src/assets/icons/linkedinIcon.png" width="64" alt="LinkedIn icon"></img>
+        <img src="/src/assets/icons/linkedinIcon.png" width="64" alt="LinkedIn icon"></img>
         <p>Linkedin</p>
       </a>
       <a href="https://www.linkedin.com/in/miel-van-sleeuwen-364766152/">
-        <img src="./src/assets/icons/palletIcon.png" width="64" alt="LinkedIn icon"></img>
+        <img src="/src/assets/icons/palletIcon.png" width="64" alt="LinkedIn icon"></img>
         <p>Codepen</p>
       </a>
     </div>

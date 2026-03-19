@@ -500,20 +500,20 @@ footer {
 @font-face {
  font-family: "Jersey-20";
  src: local("Jersey20"),
-  url("./src/assets/fonts/Jersey20-Regular.ttf") format("truetype");
+  url("/src/assets/fonts/Jersey20-Regular.ttf") format("truetype");
  font-weight: bold;
 }
 
 @font-face {
  font-family: "Garet Book";
  src: local("Garet"),
-  url("./src/assets/fonts/Garet-Book.ttf") format("truetype");
+  url("/src/assets/fonts/Garet-Book.ttf") format("truetype");
  font-weight: bold;
 }
 
 @font-face {
  font-family: "Garet Heavy";
  src: local("Garet"),
-  url("./src/assets/fonts/Garet-Heavy.ttf") format("truetype");
+  url("/src/assets/fonts/Garet-Heavy.ttf") format("truetype");
  font-weight: bold;
 }
