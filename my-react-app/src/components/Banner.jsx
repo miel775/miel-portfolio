@@ -96,10 +96,6 @@ function Banner() {
       
       <Miel />
       
-      {Array.from({ length: treeAmount }).map((_, i) => (
-        <Tree key={`tree-${i}`} />
-      ))}
-      
       <div id="amsterdam-houses">
         <AmsterdamHouseA />
         <AmsterdamHouseB />

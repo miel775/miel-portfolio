@@ -4,15 +4,16 @@ import '../stylesheets/about.css';
 
 function About() {
   return (
-    <main>
+    <div id="wrapper-header">
+      <MiniBanner title="About"/>
+      <main>
         <div class="mini-sections">
           <MiniSection title="year-2000" image="src/assets/pictures/year-2000.png">
             <div id="mini-section-year-2000">
-function About() {
-  return (
-    <main>
-        <MiniBanner title="About" />
-        <div className="mini-sections">
+              <p>Born in a warm nest 'Arendnest' in Boekel the youngest of 4.
+                <br></br>
+              This is where the story began</p>
+            </div>
           </MiniSection>
 
           <MiniSection title="year-2005" image="src/assets/pictures/year-2005.png" id="direction-change">
@@ -28,7 +29,7 @@ function About() {
             </div>
           </MiniSection>
 
-              <iframe width="200" height="155" src="https://www.youtube.com/embed/LAp_EBHPuOU?si=Uccje37Y_PQprfk3" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"></iframe>
+          <MiniSection title="year-2009" image="src/assets/pictures/year-2009.svg" id="direction-change">
             <div id="mini-section-year-2005">
               <p>My inspiration came particularly from Nintendo, remembering receiving this with cummunion. </p>
             </div>
@@ -42,10 +43,12 @@ function About() {
 
           <MiniSection title="year-2015" id="direction-change">
             <div id="mini-section-year-2015">
+
               <video width="100%" controls>
                 <source src="/src/assets/about/history-of-windows.mp4" type="video/mp4" />
               </video>
               <p>Publishing my content about the obsession I had with technology. Made this the first ever released Windows Expert video</p>
+
             </div>
           </MiniSection>
 
@@ -66,10 +69,9 @@ function About() {
               <p>Graduating for my Front End Developer Diploma</p>
           </MiniSection>
         </div>
-    </main>
+        </main>
+    </div>
   );
 }
 
-export default About;
-export default MiniBanner;
 export default About;

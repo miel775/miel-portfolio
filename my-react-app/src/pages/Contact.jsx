@@ -59,9 +59,9 @@ function ContactForm() {
 
 function Contact() {
   return (
+  <div id="wrapper-header">
+      <MiniBanner title="Contact"/>
     <main>
-      <MiniBanner title="Contact" />
-
       <div id="contact-section">
         <div id="contact">
 
@@ -73,6 +73,7 @@ function Contact() {
       </div>
 
     </main>
+  </div>
   );
 }
 

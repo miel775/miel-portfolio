@@ -9,7 +9,7 @@ function errorPage() {
           <h1>Oh oh...</h1>
 
           <p>There may be some constructions on this page</p>
-          <a id="error-page-button" href="/">Go back home</a>
+          <a class="button" id="error-page-button" href="/">Go back home</a>
           </section>
         </main>
           );
