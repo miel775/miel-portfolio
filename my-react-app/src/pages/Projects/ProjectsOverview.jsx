@@ -15,16 +15,16 @@ function ProjectsOverview() {
 
                       <div id="project-boxe">
                   <a id="box-one" href="https://miel775.github.io/the-client-website/">
-                    <img src="/src/assets/projects/project-bieb-in-bloei.png" width="500"></img>
+                    <img src="src/assets/projects/project-bieb-in-bloei.png" width="500"></img>
                   </a>
                   <a id="box-two" href="https://pleasurable-ui-ep7m.onrender.com">
-                    <img src="/src/assets/projects/project-dda.png" width="500"></img>
+                    <img src="src/assets/projects/project-dda.png" width="500"></img>
                   </a>
                   <a id="box-three" href="">
-                      <img src="/src/assets/projects/project-metro-stations.png" width="500"></img>
+                      <img src="src/assets/projects/project-metro-stations.png" width="500"></img>
                   </a>
                   <a id="box-four">
-                      <img src="/src/assets/projects/project-pokeapp.png" width="500"></img>
+                      <img src="src/assets/projects/project-pokeapp.png" width="500"></img>
                   </a>
                 </div>
 
