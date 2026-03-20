@@ -1,10 +1,18 @@
 
 import Section from '../components/Section';
 import Banner from '../components/Banner';
+// Icons
 import aboutIcon from '../assets/icons/aboutIcon.png';
 import projects from '../assets/icons/projects.png';
 import videoOfMe from '../assets/icons/videoOfMe.png';
+
+// Pictures & Video
 import aboutPicture from '../assets/pictures/about-picture.png';
+import projectBieb from '../assets/projects/project-bieb-in-bloei.png';
+import projectDda from '../assets/projects/project-dda.png';
+import projectMetro from '../assets/projects/project-metro-stations.png';
+import projectPokeapp from '../assets/projects/project-pokeapp.png';
+import myVideo from '../assets/video-of-me/video-of-me.mp4';
 
 
 function Home() {
@@ -40,16 +48,16 @@ function Home() {
               <div id="project-overview-section">
                 <div id="project-boxes">
                   <a id="box-one" href="https://miel775.github.io/the-client-website/">
-                    <img src="/src/assets/projects/project-bieb-in-bloei.png" width="500"></img>
+                    <img src={projectBieb} width="500"></img>
                   </a>
                   <a id="box-two" href="https://pleasurable-ui-ep7m.onrender.com">
-                    <img src="/src/assets/projects/project-dda.png" width="500"></img>
+                    <img src={projectDda} width="500"></img>
                   </a>
                   <a id="box-three" href="">
-                      <img src="/src/assets/projects/project-metro-stations.png" width="500"></img>
+                      <img src={projectMetro} width="500"></img>
                   </a>
                   <a id="box-four">
-                      <img src="/src/assets/projects/project-pokeapp.png" width="500"></img>
+                      <img src={projectPokeapp} width="500"></img>
                   </a>
                 </div>
               </div>
@@ -57,7 +65,7 @@ function Home() {
 
             <Section title="video-of-me" icon={videoOfMe}>
               <video width="100%" controls>
-                <source src="/src/assets/video-of-me/video-of-me.mp4" type="video/mp4" />
+                <source src={myVideo} type="video/mp4" />
               </video>
             </Section>
           </div>
