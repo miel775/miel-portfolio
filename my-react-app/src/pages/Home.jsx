@@ -4,7 +4,7 @@ import Banner from '../components/Banner';
 import aboutIcon from '../assets/icons/aboutIcon.png';
 import projects from '../assets/icons/projects.png';
 import videoOfMe from '../assets/icons/videoOfMe.png';
-
+import aboutPicture from '../assets/pictures/about-picture.png';
 
 
 function Home() {
@@ -16,7 +16,7 @@ function Home() {
               <div id="about-section">
                 <img
                   id="section-picture"
-                  src="/src/assets/pictures/about-picture.png"
+                  src={aboutPicture}
                   width="100"
                   alt="About"
                 />
