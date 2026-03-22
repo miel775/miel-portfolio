@@ -1,0 +1,60 @@
+#banner-portfolio {
+  position: relative; /* This is required so absolute elements stay inside the banner */
+}
+
+/* 2. Position the window exactly above the ground */
+.horizon-window {
+  position: absolute;
+  /* CHANGE THIS VALUE: Set this to the exact height of your <Ground /> component */
+  bottom: 130px; 
+  left: 0;
+  width: 100%;
+  height: 400px; /* Make sure this is taller than your tallest house */
+  z-index: 2; /* Forces it to sit in front of the background */
+  overflow: hidden; /* Hides the houses that scroll off-screen */
+}
+
+/* 3. The moving track for the houses */
+#banner-horizon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: baseline;
+  width: max-content;
+  height: 100%;
+  bottom: 0;
+  align-items: flex-end;
+
+  animation: scrollLeft 120s linear infinite;
+}
+
+#banner-horizon svg {
+  height: 100%;
+  width: 120px;
+  display: flex;
+  align-items: flex-end;
+}
+
+#amsterdamHouseD {
+  position: relative;
+  top: 2em;
+}
+
+/* 4. Fix SVG squishing */
+#banner-horizon svg, 
+#banner-horizon > div {
+  flex-shrink: 0; /* Prevents flexbox from crushing your 33px/1m scale */
+  display: block; 
+}
+
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Moves the track left by exactly half its total width */
+    transform: translateX(-50%); 
+  }
+}

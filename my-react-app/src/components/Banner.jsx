@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Sun from '../assets/library/sun';
 import Ground from '../assets/library/ground';
-import BenchA from '../assets/library/benchA';  
-import Tree from '../assets/library/tree';
+import Fence from '../assets/library/fences/fenceA';
 import Miel from '../assets/library/miel';
 import Cloud from '../assets/library/cloud';
 import AmsterdamHouseA from '../assets/library/amsterdam/amsterdamHouseA';
@@ -11,6 +10,7 @@ import AmsterdamHouseC from '../assets/library/amsterdam/amsterdamHouseC';
 import AmsterdamHouseD from '../assets/library/amsterdam/amsterdamHouseD';
 import AmsterdamHouseE from '../assets/library/amsterdam/amsterdamHouseE';
 import '../assets/library/animationLibrary.css'
+import '../stylesheets/banner.css'
 
 function Banner() {
   // 1. Live time tracking so the sunset animates without refreshing
@@ -96,40 +96,28 @@ function Banner() {
       
       <Miel />
       
-      <div id="amsterdam-houses">
-        <AmsterdamHouseA />
-        <AmsterdamHouseB />
-        <AmsterdamHouseA />
-        <AmsterdamHouseC />
-        <AmsterdamHouseE />
-        <AmsterdamHouseD />
-        <AmsterdamHouseA />
-        <AmsterdamHouseB />
-        <AmsterdamHouseA />
-        <AmsterdamHouseC />
-        <AmsterdamHouseE />
-        <AmsterdamHouseD />
-        <AmsterdamHouseA />
-        <AmsterdamHouseB />
-        <AmsterdamHouseA />
-        <AmsterdamHouseC />
-        <AmsterdamHouseE />
-        <AmsterdamHouseA />
-        <AmsterdamHouseC />
-        <AmsterdamHouseE />
-        <AmsterdamHouseD />
-        <AmsterdamHouseA />
-        <AmsterdamHouseB />
-        <AmsterdamHouseA />
-        <AmsterdamHouseC />
-        <AmsterdamHouseE />
-        <AmsterdamHouseD />
-        <AmsterdamHouseA />
-        <AmsterdamHouseB />
-        <AmsterdamHouseA />
-      </div>
+<div className="horizon-window">
       
-      <BenchA />
+      <div id="banner-horizon">
+        {/* First Set */}
+        <AmsterdamHouseA />
+        <AmsterdamHouseB />
+        <AmsterdamHouseC />
+        <AmsterdamHouseB />
+        <AmsterdamHouseD />
+        <AmsterdamHouseE />
+        
+        {/* Second Set (Exact Duplicate for the loop) */}
+        <AmsterdamHouseA />
+        <AmsterdamHouseB />
+        <AmsterdamHouseC />
+        <AmsterdamHouseB />
+        <AmsterdamHouseD />
+        <AmsterdamHouseE />
+      </div>
+
+    </div>
+
       <Ground />
       <Sun />
     </div>

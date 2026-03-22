@@ -14,6 +14,7 @@
     "@gsap/react": "^2.1.2",
     "gsap": "^3.14.2",
     "localforage": "^1.10.0",
+    "lunarphase-js": "^2.0.3",
     "match-sorter": "^8.2.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",

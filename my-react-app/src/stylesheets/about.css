@@ -1,25 +1,18 @@
-#mini-sections {
-    display: flex;
-    background-color: var(--color-black);
-    gap: 1em;
-    position: relative;
-    left: 10em;
-}
 
-.mini-section {
-    display: relative;
-    left: 5em;
+#mini-sections {
+    margin-top: 3em;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
 }
 
 #direction-change {
-
     grid-template-columns: 70% 30%;
     .mini-section-image {
         grid-column-start: 2;
     }
 
     .mini-section-paragraph {
-        
         grid-column-start: 1;
         grid-row-start: 1;
     }

@@ -19,12 +19,11 @@
 
 #ground {
     display: inline-block;
-    height: 20vh;
-    width: 100vw;
-    background-color: var(--ground);
+    width: 1440px;
     border: var(--border-black);
+    top: 80%;
     bottom: 0;
-    left: 0;
+    left: -10px;
     z-index: 1;
     position: absolute;
     overflow: hidden;
@@ -48,6 +47,9 @@ svg rect, path, circle, ellipse, line, polyline,polygon {
     top: 50%;
     width: 500px;
     clip-path: inset(0 0 55% 0);
+    @media (max-width: 720px) {
+      left: 20%;
+    }
 }
 
 .miel-2 {
@@ -80,6 +82,23 @@ svg rect, path, circle, ellipse, line, polyline,polygon {
     width: 75px;
     height: 75px;
 }
+
+      .ground-1 {
+        fill: #bababa;
+      }
+
+      .ground-1, .ground-2, .ground-3 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .ground-2 {
+        fill: #4e6168;
+      }
+
+      .ground-3 {
+        fill: #75634e;
+      }
 
 #tree {
     width: 50px;
@@ -220,12 +239,7 @@ svg rect, path, circle, ellipse, line, polyline,polygon {
 
 
 
-#amsterdamHouseA, #amsterdamHouseB, #amsterdamHouseC, #amsterdamHouseD, #amsterdamHouseE {
-  width: 50px;
-  position: relative;
-  top: 41vh;
-  z-index: 1;
-}
+
 
 .amsterdamHouse-windows {
   fill: var(--windows-color);
@@ -389,4 +403,12 @@ svg rect, path, circle, ellipse, line, polyline,polygon {
 
       .amsterdamHouseE-8 {
         fill: #594845;
+      }
+
+      .fenceA-1 {
+        fill: #537a76;
+      }
+
+      .fenceA-2 {
+        fill: #5e8b88;
       }

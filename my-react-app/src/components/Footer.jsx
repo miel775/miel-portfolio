@@ -90,7 +90,7 @@ const [isVisible, setIsVisible] = useState(false);
         onClick={scrollToTop}
         style={{ display: isVisible ? "block" : "none" }}
       >
-        <img src="./src/assets/icons/homeIcon.png" width="32" alt="Home icon" />
+        <img src="./src/assets/icons/internetIcon.png" width="32" alt="Home icon" />
       </button>
 
     </footer>

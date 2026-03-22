@@ -12,7 +12,7 @@ function About() {
     <div id="wrapper-header">
       <MiniBanner title="About"/>
       <main>
-        <div class="mini-sections">
+        <div id="mini-sections">
           <MiniSection title="year-2000" image={year2000}>
             <div id="mini-section-year-2000">
               <p>Born in a warm nest 'Arendnest' in Boekel the youngest of 4.
