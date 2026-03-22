@@ -8,7 +8,7 @@ import bieb from '../assets/icons/biebinbloeiIcon.png';
 import dda from '../assets/icons/ddaIcon.png';
 import pokeapp from '../assets/icons/pokemonIcon.png';
 import metro from '../assets/icons/metroIcon.png';
-import snappthis from '../assets/icons/snappthisIcon.png';
+import snappthis from '../assets/icons/snappThisIcon.png';
 import projects from '../assets/icons/projects.png';
 import videoOfMe from '../assets/icons/videoOfMe.png';
 
