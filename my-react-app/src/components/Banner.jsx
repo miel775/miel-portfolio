@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Sun from '../assets/library/sun';
 import Ground from '../assets/library/ground';
+import Tree from '../assets/library/tree';
+
 import Fence from '../assets/library/fences/fenceA';
 import Miel from '../assets/library/miel';
 import Cloud from '../assets/library/cloud';
@@ -114,6 +116,10 @@ function Banner() {
         <AmsterdamHouseB />
         <AmsterdamHouseD />
         <AmsterdamHouseE />
+      </div>
+
+      <div id="banner-trees">
+
       </div>
 
     </div>
