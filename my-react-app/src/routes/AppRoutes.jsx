@@ -33,7 +33,7 @@ function AppRoutes() {
       <Route path="/library/video/:slug" element={<NotFound />} />
 
       {/* Portfolio */}
-      <Route path="/blog" element={<NotFound />}/>
+      <Route path="/blog" element={<BlogOverview />}/>
       <Route path="/blog/:slug" element={<NotFound />} />
 
       {/* 404page */}

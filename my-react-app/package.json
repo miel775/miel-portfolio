@@ -18,6 +18,7 @@
     "match-sorter": "^8.2.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^6.30.3",
     "sort-by": "^1.2.0",
     "vite-plugin-svgr": "^4.5.0"

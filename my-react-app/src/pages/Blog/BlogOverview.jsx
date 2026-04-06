@@ -1,26 +1,53 @@
+import { useEffect, useState } from 'react';
 import MiniBanner from '/src/components/MiniBanner';
-import Portfolio from '/src/components/Portfolio';
 import '/src/stylesheets/blogs.css';
 
-function PortfolioOverview() {
+function BlogOverview() {
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+    fetch('http://localhost:1337/api/blogs?populate=CoverImage')
+      .then((res) => res.json())
+      .then((response) => {
+        setBlogs(response.data);
+        setLoading(false);
+      })
+      .catch((error) => console.error("Error fetching blogs:", error));
+  }, []);
+
+  if (loading) return <div id="wrapper-header"><p>Loading blogs...</p></div>;
+
   return (
     <div id="wrapper-header">
-      <MiniBanner title="Blogs"/>
-      <main>
-        
-        <div id="blog-head-picture">
-          <img src="./src/assets/blogs/example.png"></img>
-        </div>
+        <MiniBanner title="All Blogs"/>
 
-        <p>In the study of Front End Web Development you discover a lot of new feature when using CSS. CSS is an easy way to style HTML elements but its features changing the whole time.  In this blog I am going to discover three new features that are released last year.</p>
+        <main className="blog-grid">
+          {blogs.lenth === 0 ? (
+            <p>No Blogs published yet</p>
+          ) : (
+            blogs.map((blog) => {
+              const thumbnailUrl = blog.CoverImage?.url
+                ? `https://localhost:1337${blog.CoverImage.url}`
+                : null;
 
-        <h2>Scroll button</h2>
+                return (
+                  <article key={blog.documentId} className="blog-card">
+                    {thumbnailUrl && (
+                      <img src={thumbnailUrl} alt={blog.title} className="blog-thumbnail"/>
+                    )}
+                    <h2>{blog.title}</h2>
+                    <p> {blog.excerpt} </p>
 
-        <p>For a coding spike last year there is a way to solve a photo carrousel without using any javascript. This seemed to be an interesting way to make a carrousel with the new scroll button function you don’t have to worry about it.</p>
-
-      </main>
+                    <Link to={`/blogs/${blog.slug}`} className="read-more-button">
+                    Read Article
+                    </Link>
+                  </article>
+                );
+            })
+          )}
+        </main>
     </div>
   );
 }
-
-export default PortfolioOverview;
+export default BlogOverview;
