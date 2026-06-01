@@ -301,6 +301,13 @@ main {
     justify-content: center;
 }
 
+#wrapper-header-loading {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 /* mini section */
 
 #mini-section {

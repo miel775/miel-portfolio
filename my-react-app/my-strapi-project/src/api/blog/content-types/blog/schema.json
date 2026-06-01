@@ -12,14 +12,21 @@
   "pluginOptions": {},
   "attributes": {
     "Title": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 255,
+      "required": true,
+      "unique": true
     },
-    "content": {
-      "type": "richtext"
+    "theme": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::theme.theme",
+      "inversedBy": "blogs"
     },
     "cover": {
       "type": "media",
       "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -29,13 +36,41 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "Title"
+      "targetField": "Title",
+      "required": true,
+      "maxLength": 255
     },
-    "theme": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::theme.theme",
-      "inversedBy": "blogs"
+    "isFeatured": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "summary": {
+      "type": "text",
+      "maxLength": 255,
+      "required": true
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
     }
   }
 }
