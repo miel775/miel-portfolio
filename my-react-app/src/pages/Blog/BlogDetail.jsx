@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ReactMarkdown from 'react-markdown';
+import { BlocksRenderer } from '@strapi/blocks-react-renderer';
+import { STRAPI_URL } from '../../api';
 import MiniBanner from '/src/components/MiniBanner';
 import '/src/stylesheets/blogs.css';
 
 function BlogDetail() {
   const { slug } = useParams(); 
-  
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:1337/api/blogs?filters[slug][$eq]=${slug}&populate=CoverImage`)
+    fetch(`${process.env.STRAPI_URL}/api/blogs?filters[slug][$eq]=${slug}&populate=*`)
       .then((res) => res.json())
       .then((response) => {
         if (response.data && response.data.length > 0) {
@@ -22,34 +22,27 @@ function BlogDetail() {
       .catch((error) => console.error("Error fetching blog:", error));
   }, [slug]);
 
-  // 3. Handle loading and "not found" states
   if (loading) return <div id="wrapper-header"><p>Loading article...</p></div>;
   if (!post) return <div id="wrapper-header"><p>Blog post not found.</p></div>;
 
-  // 4. Strapi image URL fix
-  // Strapi returns images as relative paths (e.g., "/uploads/my-image.png"). 
-  // We must prepend your local server URL so React can find it.
+  // Use optional chaining to safely access deep properties
   const imageUrl = post.CoverImage?.url 
-    ? `http://localhost:1337${post.CoverImage.url}` 
-    : null; // Fallback in case a post doesn't have an image
+    ? `${process.env.STRAPI_URL}${post.CoverImage.url}` 
+    : null;
 
   return (
-    <div id="wrapper-header">
-      <MiniBanner title={post.title} />
-      
-      <main>
-        {imageUrl && (
-          <div id="blog-head-picture">
-            <img src={imageUrl} alt={post.title} />
-          </div>
-        )}
-
-        <div className="blog-content">
-          <ReactMarkdown>{post.Content}</ReactMarkdown>
-        </div>
-
-      </main>
-    </div>
+<div className="blog-content">
+  <BlocksRenderer 
+    content={post.content} 
+    blocks={{
+      link: ({ children, url }) => <a href={url} target="_blank" rel="noreferrer">{children}</a>,
+      heading: ({ children, level }) => {
+        const Tag = `h${level}`;
+        return <Tag className="blog-heading">{children}</Tag>;
+      }
+    }}
+  />
+</div>
   );
 }
 

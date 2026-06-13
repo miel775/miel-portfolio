@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // 1. Added missing Link import
 import MiniBanner from '/src/components/MiniBanner';
+import { STRAPI_URL } from '../api';
 import '/src/stylesheets/blogs.css';
 
 function BlogOverview() {
