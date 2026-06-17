@@ -488,11 +488,9 @@ footer {
 
 
 #minibanner {
-  height: 8vh;
+  height: 10vh;
   width: 100vw;
   display: inline-block;
-  background-color: var(--accent-color-lighter);
-  border: var(--border-white);
   display: flex;
   align-content: baseline;
   justify-content: flex-start;
@@ -502,7 +500,7 @@ footer {
     font-size: 64px;
     font-family: 'Jersey-20';
     margin-top: 0;
-    margin-left: 10%;
+    margin-left: 5%;
   }
 }
 
