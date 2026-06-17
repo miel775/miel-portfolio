@@ -1,62 +1,69 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; // 1. Added missing Link import
+import { Link } from 'react-router-dom'; 
 import MiniBanner from '/src/components/MiniBanner';
-import { STRAPI_URL } from '../api';
 import '/src/stylesheets/blogs.css';
 
 function BlogOverview() {
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
-    fetch('http://localhost:1337/api/blogs?populate=CoverImage')
-      .then((res) => res.json())
-      .then((response) => {
-        setBlogs(response.data);
+    fetch(`${import.meta.env.VITE_STRAPI_API_URL}/api/blogs?populate=featured_image`, {
+      headers: {
+        Authorization: `Bearer ${import.meta.env.VITE_STRAPI_API_TOKEN}`,
+      },
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error('Failed to fetch');
+        return res.json();
+      })
+      .then((result) => {
+        setData(result.data);
         setLoading(false);
       })
-      .catch((error) => console.error("Error fetching blogs:", error));
+      .catch((err) => {
+        console.error("Error fetching data:", err);
+        setLoading(false);
+      });
   }, []);
 
-  if (loading) return (
-    <div id="wrapper-header-loading">
-      <p>Loading blogs...</p>
-    </div>
-  );
+  if (loading) return <p>Loading...</p>;
+  if (!data) return <p>No blog content found.</p>;
 
-  return (
-    <div id="wrapper-header">
-        <MiniBanner title="All Blogs"/>
+return (
+    <div>
+      <MiniBanner title="Blogs"/>
+      <div id="blog-tiles">
+{Array.isArray(data) && data.length > 0 ? (
+  data.map((blog) => {
+    const imageUrl = blog.featured_image?.formats?.medium?.url;
 
-        <main className="blog-grid">
-          {/* 2. Fixed typo from lenth to length */}
-          {blogs.length === 0 ? (
-            <p>No Blogs published yet</p>
-          ) : (
-            blogs.map((blog) => {
-              // 3. Changed https to http for localhost
-              const thumbnailUrl = blog.CoverImage?.url
-                ? `http://localhost:1337${blog.CoverImage.url}`
-                : null;
-
-                return (
-                  <article key={blog.documentId} className="blog-card">
-                    {thumbnailUrl && (
-                      <img src={thumbnailUrl} alt={blog.title} className="blog-thumbnail"/>
-                    )}
-                    <h2>{blog.title}</h2>
-                    <p>{blog.excerpt}</p>
-
-                    <Link to={`/blogs/${blog.slug}`} className="read-more-button">
-                      Read Article
-                    </Link>
-                  </article>
-                );
-            })
+    return (
+      <main key={blog.documentId} className="blog-card">
+        <section className="blog-tile">
+          {imageUrl && (
+            <img 
+              src={`${import.meta.env.VITE_STRAPI_API_URL}${imageUrl}`} 
+              alt={blog.featured_image.alternativeText || blog.title} 
+              width="256"
+            />
           )}
-        </main>
+          
+          <h2>{blog.title}</h2>
+          <p>{blog.description}</p>
+          
+          <div className="button">
+            <Link to={`/blog/${blog.documentId}`}>Read More</Link>
+          </div>
+        </section>
+      </main>
+    );
+  })
+) : (
+  <p>No blog content found.</p>
+)}
+      </div>
     </div>
   );
 }
-
 export default BlogOverview;

@@ -1,48 +1,52 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { BlocksRenderer } from '@strapi/blocks-react-renderer';
-import { STRAPI_URL } from '../../api';
-import MiniBanner from '/src/components/MiniBanner';
+import ReactMarkdown from 'react-markdown';
 import '/src/stylesheets/blogs.css';
 
 function BlogDetail() {
   const { slug } = useParams(); 
-  const [post, setPost] = useState(null);
+  const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${process.env.STRAPI_URL}/api/blogs?filters[slug][$eq]=${slug}&populate=*`)
+    // 1. Fetching data using the slug filter
+    fetch(`${import.meta.env.VITE_STRAPI_API_URL}/api/blogs?filters[slug][$eq]=${slug}&populate=*`)
       .then((res) => res.json())
-      .then((response) => {
-        if (response.data && response.data.length > 0) {
-          setPost(response.data[0]);
-        }
+      .then((result) => {
+        // 2. Strapi returns data as an array, so we pick the first match
+        setBlog(result.data[0]);
         setLoading(false);
       })
-      .catch((error) => console.error("Error fetching blog:", error));
+      .catch((err) => {
+        console.error("Error fetching blog:", err);
+        setLoading(false);
+      });
   }, [slug]);
 
-  if (loading) return <div id="wrapper-header"><p>Loading article...</p></div>;
-  if (!post) return <div id="wrapper-header"><p>Blog post not found.</p></div>;
+  if (loading) return <p>Loading...</p>;
+  if (!blog) return <p>Blog post not found.</p>;
 
-  // Use optional chaining to safely access deep properties
-  const imageUrl = post.CoverImage?.url 
-    ? `${process.env.STRAPI_URL}${post.CoverImage.url}` 
-    : null;
+  // 3. Destructure the specific fields from the API object
+  // Note: Adjust 'markdown_content' if your field is named differently in Strapi
+  const { title, subtitle, featured_image, markdown_content } = blog;
+  const imageUrl = featured_image?.url;
 
   return (
-<div className="blog-content">
-  <BlocksRenderer 
-    content={post.content} 
-    blocks={{
-      link: ({ children, url }) => <a href={url} target="_blank" rel="noreferrer">{children}</a>,
-      heading: ({ children, level }) => {
-        const Tag = `h${level}`;
-        return <Tag className="blog-heading">{children}</Tag>;
-      }
-    }}
-  />
-</div>
+    <article className="blog-post">
+      <h1>{title}</h1>
+      {subtitle && <h3>{subtitle}</h3>}
+      
+      {imageUrl && (
+        <img 
+          src={`${import.meta.env.VITE_STRAPI_API_URL}${imageUrl}`} 
+          alt={featured_image.alternativeText || title} 
+        />
+      )}
+
+      <div className="markdown-body">
+        <ReactMarkdown>{markdown_content}</ReactMarkdown>
+      </div>
+    </article>
   );
 }
 
