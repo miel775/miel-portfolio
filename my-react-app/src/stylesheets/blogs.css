@@ -1,3 +1,37 @@
-#blog-head-picture img {
+
+#blog-tiles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    padding: 5%;
+}
+
+.blog-card {
+    border: 3px solid black;
+    background-color: var(--accent-color-lighter);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-tile img {
     width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 2px solid black;
+}
+
+.blog-tile {
+    width: 100%;
+    min-width: 0; 
+    overflow: hidden;
+}
+
+.blog-card p {
+    margin: 10px 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
