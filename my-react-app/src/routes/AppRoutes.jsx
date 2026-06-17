@@ -24,8 +24,8 @@ function AppRoutes() {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
 
-      <Route path="/projects" element={<NotFound />} />
-      <Route path="/project/:slug" element={<NotFound />} />
+      <Route path="/projects" element={<ProjectsOverview />} />
+      <Route path="/blog/:slug" element={<BlogDetail />} />
 
       {/* Library */}
       <Route path="/library" element={<NotFound />} />
@@ -34,7 +34,7 @@ function AppRoutes() {
 
       {/* Portfolio */}
       <Route path="/blog" element={<BlogOverview />}/>
-      <Route path="/blog/:slug" element={<NotFound />} />
+      <Route path="/blog/:slug" element={<BlogDetail />} />
 
       {/* 404page */}
       <Route path="*" element={<NotFound />} />
